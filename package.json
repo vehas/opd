@@ -4,7 +4,12 @@
   "description": "Out Patient Department Online System",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "dev": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vehas/opd"
   },
   "keywords": [
     "Out",
@@ -14,5 +19,16 @@
     "System"
   ],
   "author": "sa db se and friend",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "browser-sync": "^2.9.12",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-sass": "^2.1.0",
+    "jade": "^1.11.0",
+    "node-sass": "^3.4.1"
+  }
 }
