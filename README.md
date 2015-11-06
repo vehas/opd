@@ -12,3 +12,4 @@ git clone https://github.com/vehas/opd
 cd opd
 npm install
 ```
+let start semi live  edit
