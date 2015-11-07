@@ -29,6 +29,7 @@
     "gulp-nodemon": "^2.0.4",
     "gulp-sass": "^2.1.0",
     "jade": "^1.11.0",
+    "morgan": "^1.6.1",
     "node-sass": "^3.4.1"
   }
 }
