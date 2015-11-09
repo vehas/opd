@@ -11,7 +11,7 @@ route.get('/register', (req, res, next) => {
   require('../models/register')('register',
     req, res, next);
 });
-route.get('patient', (req, res, next) => {
+route.get('/patient', (req, res, next) => {
   require('../models/patient')('patient',
     req, res, next);
 });
@@ -19,7 +19,8 @@ route.get('/hospitalStaff', (req, res, next) => {
   require('../models/hospitalStaff')('hospitalStaff',
     req, res, next);
 });
-route.get('nurse', (req, res, next) => {
+route.get('/nurse', (req, res, next) => {
+  console.log('nurese');
   require('../models/nurse')('nurse',
     req, res, next);
 });

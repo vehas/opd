@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 // var sass = require('gulp-sass');
 // var prefix = require('gulp-autoprefixer');
+var watch = require('gulp-watch');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var nodemon = require('gulp-nodemon');
@@ -10,17 +11,17 @@ gulp.task('browser-sync', ['nodemon'], () => {
     proxy: 'http://localhost:3000',
     files: ['./*.jade'],
     browser: ['google-chrome'],
-    port:	7000,
+    port:	7000
   });
 });
 
 gulp.task('default', ['browser-sync'], () => {
 	// gulp.watch("public/scss/*.scss", ['sass']);
-	gulp.watch(["./app.js", "./*.html", "./views/*.jade"], reload);
+  watch(['./app.js', './*.html', './views/*.jade'], reload);
 });
 
-gulp.task('nodemon',(cb) =>  {
-	var called = false;
+gulp.task('nodemon', cb => {
+  var called = false;
   return nodemon({
     script: 'app.js',
     ignore: [
@@ -28,14 +29,14 @@ gulp.task('nodemon',(cb) =>  {
       'node_modules/'
     ]
   })
-  .on('start', function () {
+  .on('start', () => {
     if (!called) {
       called = true;
       cb();
     }
   })
-  .on('restart', function () {
-    setTimeout(function () {
+  .on('restart', () => {
+    setTimeout(() => {
       reload({ stream: false });
     }, 1000);
   });
