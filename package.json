@@ -33,6 +33,7 @@
     "jade": "^1.11.0",
     "morgan": "^1.6.1",
     "node-sass": "^3.4.1",
+    "normalize.css": "^3.0.3",
     "zombie": "^4.2.1"
   }
 }

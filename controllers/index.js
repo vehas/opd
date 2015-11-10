@@ -20,7 +20,6 @@ route.get('/hospitalStaff', (req, res, next) => {
     req, res, next);
 });
 route.get('/nurse', (req, res, next) => {
-  console.log('nurese');
   require('../models/nurse')('nurse',
     req, res, next);
 });
