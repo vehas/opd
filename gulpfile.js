@@ -9,7 +9,7 @@ var nodemon = require('gulp-nodemon');
 gulp.task('browser-sync', ['nodemon'], () => {
   browserSync.init(null, {
     proxy: 'http://localhost:3000',
-    files: ['./*.jade'],
+    // files: ['./*.jade'],
     browser: ['google-chrome'],
     port:	7000
   });

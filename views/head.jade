@@ -4,6 +4,8 @@ html
     link(rel='stylesheet' type='text/css' href='../dist/normalize.css')
     link(rel='stylesheet' type='text/css' href='../dist/style.css')
   body
-    div name #{name}
-    div name pass  id
-    hr
+    if typeof account === undefined
+      div #{account.name}
+      div #{account.id}
+      //- div #{!unauthenedPage}
+      hr

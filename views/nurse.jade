@@ -1,15 +1,17 @@
 include ./head
-h1 nurse
+h2 #{page}
 table
   thead
     tr
       td name
       td surname
       td gender
-      td year old
+      td age
   tbody
-    tr
-      td macro
-      td polo
-      td male
-      td 35
+    each par in patient
+      tr
+        td
+          a(href="/nurse/patient/#{par.name}") #{par.name}
+        td #{par.surname}
+        td #{par.gender}
+        td #{par.age}
