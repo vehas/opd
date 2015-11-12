@@ -53,4 +53,15 @@ route.get('/pharmacist', (req, res, next) => {
   require('../models/pharmacist')('pharmacist',
     req, res, next);
 });
+
+
+route.param('ppid', (req, res, next, id) => {
+  req.id = id;
+  console.log(id);
+  next();
+});
+route.get('/pharmacist/patient/:ppid', (req, res, next) => {
+  require('../models/pharmacistDetail')('pharmacistDetail',
+    req, res, next);
+});
 module.exports = route;
