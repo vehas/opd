@@ -1,6 +1,42 @@
-.doctor-table{
-	background-color: #f2f2f2;
+.table-x{
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 640px; 
+border-collapse: 
+collapse; border-spacing: 0; 
 }
+.table-x tr{
+ border: 1px solid  #f7f7f9;
+}
+.table-x td{
+ border: 1px solid  #f9f9fa; /* No more visible border */
+height: 30px; 
+}
+.table-x th{
+border: 1px solid  #f7f7f9; /* No more visible border */
+height: 30px;  /* Simple transition for hover effect */
+background: #dedee0;  /* Darken header a bit */
+font-weight: bold;
+text-transform: uppercase;
+}
+.head-doc{
+	margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-weight: bold; 
+	font-size: 28px;
+	line-height: 30px;
+	text-transform: uppercase;
+
+}
+.head-doc2{
+	margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-weight: bold; 
+	font-size: 22px;
+	text-transform: uppercase;
+
+}
+
 .doctor-headList{
 	background-color: #ccccff;
 }
@@ -15,4 +51,8 @@
 .midicine > .col-md-3{
 	background-color: #f3f;
 	padding-left: 2px;
+}
+.list-group-item{
+	background-color: #c5c5c7;
+	text-align: center;
 }
