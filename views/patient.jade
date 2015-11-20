@@ -1,17 +1,19 @@
 include ./head
 h1 patient
-
-ul.nav.nav-tabs
+.panel.panel-login
+ .panel-heading
+   ul.nav.nav-tabs
               li.active
-                a(data-toggle='tab', href='#login') Patient
-             
-.tab-content
+
+                a#patienttab(data-toggle='tab', href='#login') Patient
+
+   .tab-content
         
-        #login.tab-pane.fade.in.active
+        #patientMain.tab-pane.fade.in.active
           .container
            .row
              //#make.btn.btn-info Make Appointment
-             #make.button.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#makeModal') Make Appointment
+             #make.button.btn.btn-info.btn-md(type='button', data-toggle='modal', data-target='#makeModal') Make Appointment
            .row
              .col-md-8.col-md-offset-2
                .panel.panel-default
@@ -19,11 +21,11 @@ ul.nav.nav-tabs
                  #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
                  .col-sm-3
                   .row
-                    #postpone.button.btn.btn-success.btn-lg(type='button', data-toggle='modal', data-target='#PostponeModal') Postpone
+                    #postpone.button.btn.btn-success.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModal') Postpone
                     //#postpone.btn.btn-success.btn-pc.col Postpone
                   .row
                     //#cancel.btn.btn-warning.btn-pc Cancel
-                    #cancel.button.btn.btn-warning.btn-lg(type='button', data-toggle='modal', data-target='#CancelModal') Cancel
+                    #cancel.button.btn.btn-warning.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModal') Cancel
                     
 
            .row
@@ -61,35 +63,46 @@ ul.nav.nav-tabs
                  .form-group
                    label(for='Doctor') Doctor Name:
                    input#Docname.form-control(type='text', placeholder='ในกรณีที่ต้องการระบุแพทย์ที่ต้องการพบ')
+                
                  .form-group
-                   label(for='Department') Department:
+                   label(for='sel1') Department (select one):
+                   select#sel1.form-control
+                     option อายุรกรรม
+                     option ศัลยกรรม
+                     option กุมารเวชกรรม
+                     option สูตินรีเวช
+                     option ทันตกรรม
+                     option เวชปฎิบัติ
+                     option แพทย์เฉพาะทางอื่นๆ
                  
-                 .dropdown
-                   button#Department.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
-                    | Department
-                    span.caret
-                   ul.dropdown-menu(role='menu', aria-labelledby='menu1')
-                    li(role='presentation')
-                     a(role='menuitem', tabindex='-1', href='#') อายุรกรรม
-                    li(role='presentation')
-                     a(role='menuitem', tabindex='-1', href='#') ศัลยกรรม
-                    li(role='presentation')
-                     a(role='menuitem', tabindex='-1', href='#') กุมารเวชกรรม
-                    li(role='presentation')
-                     a(role='menuitem', tabindex='-1', href='#') สูตินรีเวช
-                    li(role='presentation')
-                     a(role='menuitem', tabindex='-1', href='#') ทันตกรรม
-                    li(role='presentation')
-                     a(role='menuitem', tabindex='-1', href='#') เวชปฎิบัติ
-                    li.divider(role='presentation')
-                    li(role='presentation')
-                     a(role='menuitem', tabindex='-1', href='#') แพทย์เฉพาะทางอื่นๆ
-                  br
-                 script.
-                  $(document).ready(function(){
-                  $(".dropdown-toggle").dropdown("toggle");
-                  });
+
+                 //- .dropdown
+                 //-   button#Department.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+                 //-    | Department
+                 //-    span.caret
+                 //-   ul.dropdown-menu(role='menu', aria-labelledby='menu1')
+                 //-    li(role='presentation')
+                 //-     a(role='menuitem', tabindex='-1', href='#') อายุรกรรม
+                 //-    li(role='presentation')
+                 //-     a(role='menuitem', tabindex='-1', href='#') ศัลยกรรม
+                 //-    li(role='presentation')
+                 //-     a(role='menuitem', tabindex='-1', href='#') กุมารเวชกรรม
+                 //-    li(role='presentation')
+                 //-     a(role='menuitem', tabindex='-1', href='#') สูตินรีเวช
+                 //-    li(role='presentation')
+                 //-     a(role='menuitem', tabindex='-1', href='#') ทันตกรรม
+                 //-    li(role='presentation')
+                 //-     a(role='menuitem', tabindex='-1', href='#') เวชปฎิบัติ
+                 //-    li.divider(role='presentation')
+                 //-    li(role='presentation')
+                 //-     a(role='menuitem', tabindex='-1', href='#') แพทย์เฉพาะทางอื่นๆ
+                 //-  br
+                 //- script.
+                 //-  $(document).ready(function(){
+                 //-  $(".dropdown-toggle").dropdown("toggle");
+                 //-  });
                  input#depart.form-control(type='text', placeholder='ในกรณีที่ต้องการระบุแพทย์เฉพาะทางอื่นๆ')
+
                  //.form-group
                    label(for='pwd') Password:
                    input#pwd.form-control(type='password', placeholder='Enter password')
@@ -127,7 +140,7 @@ ul.nav.nav-tabs
           #CancelModal.modal.fade(role='dialog')
            .modal-dialog.modal-lg
             .modal-content
-              .modal-header
+             .modal-header
                button.close(type='button', data-dismiss='modal') x
                h4.modal-title Confirm to Cancel Appointment
              .modal-body
@@ -135,6 +148,6 @@ ul.nav.nav-tabs
                 #date.p Appointment Detail
                   
              .modal-footer
-               button.btn.btn-default(type='submit') Submit
-               button.btn.btn-default(type='button', data-dismiss='modal') Close
+               button.btn.btn-default.btn-cancel(type='submit') Submit
+               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close
 
