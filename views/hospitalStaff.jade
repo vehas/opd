@@ -1,8 +1,8 @@
 include ./head
 h1 hospitalStaff
 
-.row
-        .col-md-10.col-md-offset-1
+      .row
+        .col-md-5.col-md-offset-3
           .panel.panel-login
             .panel-heading
              ul.nav.nav-tabs
@@ -12,46 +12,22 @@ h1 hospitalStaff
                 a(data-toggle='tab', href='#impDocSch') Import Doctor Schedule
              .tab-content
               #pAppMan.tab-pane.fade.in.active
-                input#CitizenID.form-control(type='text', name='citizenId', tabindex='1', placeholder='Patient CitizenID')
+                br
                 .row
-                 .col-md-7.col-md-offset-6
-                  .row
+                 .col-md-6.col-md-offset-3
+                  input#CitizenID.form-control(type='text', name='citizenId', tabindex='1', placeholder='Patient CitizenID')
+                .row
+                 .col-md-8.col-md-offset-7
+                    br
                     #pam.button.btn.btn-success.btn-lg(type='button', data-toggle='modal', data-target='#PamModal') summit
 
                     
            // pam Modal
       #PamModal.modal.fade(role='dialog')
           .modal-dialog.modal-lg
-             .modal-content
-                 .modal-header
-                      button.close(type='button', data-dismiss='modal') ×
-                      h4.modal-title Patient Appointment Manager
-                  .modal-body
-                     .tab-content
-        
-                         #patientMain.tab-pane.fade.in.active
-                               .container
-                                   .row
-                                     #make.button.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#makeModal') Make Appointment
-                                   .row
-                                     .col-md-8.col-md-offset-2
-                                      .panel.panel-default
-                                    .row
-                                       #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
-                 
-                    
-
-           .row
-             .col-md-8.col-md-offset-2
-               .panel.panel-default
-                .row
-                 #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
-                 .col-sm-3
-                  .row
-                    #postpone.btn.btn-success.btn-pc.col Postpone
-                  .row
-                    #cancel.btn.btn-warning.btn-pc Cancel
-                     
-                  
-                  .modal-footer
-                      button.btn.btn-default(type='button', data-dismiss='modal') Close
+          .modal-content
+             .modal-header
+               button.close(type='button', data-dismiss='modal') ×
+               h4.modal-title Patient Appointment Manager
+             .modal-body
+             br                    
