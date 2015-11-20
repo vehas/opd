@@ -1,23 +1,4 @@
 include ./head
 <ul class="nav nav-tabs"><li  class="active" ><a href="/doctor/patient/macro">Home</a></li>
 <li ><a href="/doctor">Patient List</a></li></ul>
-.bg
-  h1 doctor calendar
-  .calendar
-script.calendarTemplate(type="text/template")
-  .clndr
-    .row
-      .clndr-controls.btn-group
-        button.clndr-previous-button.btn.btn-default previous <
-        button.mounth.btn.btn-default <%= month %> <%= year %>
-        button.clndr-next-button.btn.btn-default > next
-    table.clndr-grid.table
-      .days-of-the-weeks.days.
-        <% _.each(daysOfTheWeek, function(day) { %>
-        <span class="cell header-day sus"><%= day %></span>
-        <% }); %>
-      .days
-        <% _.each(days, function(day) { %>
-        <span class="cell <%= day.classes %><%if (typeof day.events[0] != 'undefined'){%> ${day.events[0].period} <% }%><%if (typeof day.events[1] != 'undefined'){%> ${day.events[1].period} <% }%>"><%= day.day %></span>
-        <% if(parseInt(day.day)%7===0) {%> <br> <%} }); %>
-script(src='../../dist/js/doctor-Calendar.js')
+include ./calendar
