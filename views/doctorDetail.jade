@@ -1,20 +1,23 @@
 include ./head
 <ul class="nav nav-tabs"><li  class="active" ><a href="/doctor/patient/macro">Home</a></li>
 <li ><a href="/doctor">Patient List</a></li></ul>
-h1 doctor
-a id="add-feed-button" role="button" data-toggle="modal" href="#add-feed-form" class="btn pull-right btn-success" style="margin-left:5px; margin-top:-4px;">Add new</a>
-
-<div id="add-feed-form" class="form-feed modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-<h3 id="myModalLabel">Modal header</h3>
-
-</div>
-<div class="modal-body">
-<p>One fine body…</p>
-</div>
-<div class="modal-footer">
-<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-<button class="btn btn-primary">Save changes</button>
-</div>
-</div>
+.bg
+  h1 doctor calendar
+  .calendar
+script.calendarTemplate(type="text/template")
+  .clndr
+    .row
+      .clndr-controls.btn-group
+        button.clndr-previous-button.btn.btn-default previous <
+        button.mounth.btn.btn-default <%= month %> <%= year %>
+        button.clndr-next-button.btn.btn-default > next
+    table.clndr-grid.table
+      .days-of-the-weeks.days.
+        <% _.each(daysOfTheWeek, function(day) { %>
+        <span class="cell header-day sus"><%= day %></span>
+        <% }); %>
+      .days
+        <% _.each(days, function(day) { %>
+        <span class="cell <%= day.classes %><%if (typeof day.events[0] != 'undefined'){%> ${day.events[0].period} <% }%><%if (typeof day.events[1] != 'undefined'){%> ${day.events[1].period} <% }%>"><%= day.day %></span>
+        <% if(parseInt(day.day)%7===0) {%> <br> <%} }); %>
+script(src='../../dist/js/doctor-Calendar.js')
