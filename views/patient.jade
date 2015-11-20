@@ -2,23 +2,35 @@ include ./head
 h1 patient
 ul.nav.nav-tabs
               li.active
-                a(data-toggle='tab', href='#login') Login
+                a(data-toggle='tab', href='#login') Patient
              
-       .tab-content
-        .container
-          .row
-            #login.tab-pane.fade.in.active
+.tab-content
+        
+        #login.tab-pane.fade.in.active
+          .container
+           .row
              #make.btn.btn-info Make Appointment
-             .col-md-6.col-md-offset-3 
-              .panel.panel-default
-               #appane.panel-body ไทย
-               #postpone.btn.btn-success Postpone
-               #cancel.btn.btn-warning Cancel
-             .col-md-6.col-md-offset-3 
-              .panel.panel-default
-               #appane.panel-body ไทย
-               #postpone.btn.btn-success Postpone
-               #cancel.btn.btn-warning Cancel
+           .row
+             .col-md-8.col-md-offset-2
+               .panel.panel-default
+                .row
+                 #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
+                 .col-sm-3
+                  .row
+                    #postpone.btn.btn-success.btn-pc.col Postpone
+                  .row
+                    #cancel.btn.btn-warning.btn-pc Cancel
+
+           .row
+             .col-md-8.col-md-offset-2
+               .panel.panel-default
+                .row
+                 #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
+                 .col-sm-3
+                  .row
+                    #postpone.btn.btn-success.btn-pc.col Postpone
+                  .row
+                    #cancel.btn.btn-warning.btn-pc Cancel
                     
                   
 
