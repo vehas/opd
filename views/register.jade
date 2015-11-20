@@ -1,9 +1,29 @@
 include ./head.jade
 h1 register
-h1=age+10
 .con
   span.name name
-  input(type="text",name="name")
+  input#name(type="text",name="name")
 .con
   span.surname surname
-  input(type="text",name="surname")
+  input#surname(type="text",name="surname")
+.con
+  span.bdate bdate
+  input#bdate(type="text",name="bdate")
+.con
+  span.phoneNO phone number
+  input#phoneNO(type="text",name="phoneNO")
+.con
+  span.bdate phonecitizenID
+  input#citizenID(type="text",name="citizenID")
+.con
+  span.email email
+  input#email(type="text",name="email")
+.con
+  span.password password
+  input#password(type="text",name="password")
+.con
+  span.confirmPassword confirm password
+  input#confirmPassword(type="text",name="confirmPassword")
+.con
+  button confirm
+  

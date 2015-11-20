@@ -6,10 +6,11 @@ let config = require('./config.json');
 let app = express(),
   port = config.port;
 // set up
-app.use(morgan(':method :url'));
+app.use(morgan(':method :url :status :response-time ms  :res[content-length]'));
 app.engine('jade', require('jade').__express);
 app.set('view engine', 'jade');
 app.set('views', './views');
+app.use('/dist', express.static('dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

@@ -9,7 +9,7 @@ var nodemon = require('gulp-nodemon');
 gulp.task('browser-sync', ['nodemon'], () => {
   browserSync.init(null, {
     proxy: 'http://localhost:3000',
-    files: ['./*.jade'],
+    // files: ['./*.jade'],
     browser: ['google-chrome'],
     port:	7000
   });
@@ -17,7 +17,7 @@ gulp.task('browser-sync', ['nodemon'], () => {
 
 gulp.task('default', ['browser-sync'], () => {
 	// gulp.watch("public/scss/*.scss", ['sass']);
-  watch(['./app.js', './*.html', './views/*.jade'], reload);
+  watch(['./app.js', './*.html', './views/*.jade', './dist/*' ,'./dist/*'], reload);
 });
 
 gulp.task('nodemon', cb => {

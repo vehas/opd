@@ -1,2 +1,20 @@
 include ./head
 h1 doctor
+table
+  thead
+    tr
+      td name
+      td surname
+      td gender
+      td age
+  tbody
+    each par in patient
+      tr
+        td 
+          a(href='/doctor/patient/#{par.name}') #{par.name}
+        td 
+          a(href='/doctor/patient/#{par.name}') #{par.surname}
+        td 
+          a(href='/doctor/patient/#{par.name}') #{par.gender}
+        td
+          a(href='/doctor/patient/#{par.name}') #{par.age}
