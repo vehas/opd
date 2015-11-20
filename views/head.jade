@@ -1,15 +1,40 @@
 html
   head
     title=page
-    link(rel='stylesheet' type='text/css' href='../../dist/normalize.css')
-    link(rel='stylesheet' type='text/css' href='../../dist/style.css')
-    link(rel='stylesheet' type='text/css' href='../../dist/doctor.css')
-    link(rel="stylesheet" href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css') 
+    //- link(rel='stylesheet' type='text/css' href='../../dist/normalize.css')
+    // link(rel='stylesheet' type='text/css' href='../../dist/style.css')
+    // link(rel='stylesheet' type='text/css' href='../../dist/doctor.css')
+    // link(rel="stylesheet" href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css') 
 
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
     script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    link(rel='stylesheet' type='text/css' href='../../dist/css/normalize.css')
+    link(rel='stylesheet' type='text/css' href='../../dist/css/style.css')
+    link(rel="stylesheet" href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
 
+    script(src='../../dist/js/lib/jquery-1.11.3.min.js')
+    //- script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+
+    //-bootstrap
+    link(href='../../dist/css/lib/bootstrap.min.css' rel="stylesheet" type='text/css')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    //-login css & js
+    link(href="../../dist/css/login.css" rel="stylesheet")
+    script(src="../../dist/js/login.js")
+
+    //-paitent css
+    link(href="../../dist/css/patient.css" rel="stylesheet")
+
+    //-bootstrap datepicker
+    script(src='../../dist/js/lib/bootstrap.js')
+    script(src='../../dist/js/lib/bootstrap-datepicker.js')
+    link(href='../../dist/css/lib/datepicker.css' rel="stylesheet" type='text/css')
+
+
+  
+    link()
   body
     if typeof account === undefined
       div #{account.name}

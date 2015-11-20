@@ -1,3 +1,18 @@
 .doctor-table{
-	background-color: green;
+	background-color: #f2f2f2;
+}
+.doctor-headList{
+	background-color: #ccccff;
+}
+.midicine > .name{
+	background-color: #f3f;
+	margin-left: 2px;
+}
+.midicine > .quality{
+	background-color: #f3f;
+	margin-left: 2px;
+}
+.midicine > .col-md-3{
+	background-color: #f3f;
+	padding-left: 2px;
 }
