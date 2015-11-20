@@ -138,7 +138,7 @@ ul.nav.nav-tabs
           #CancelModal.modal.fade(role='dialog')
            .modal-dialog.modal-lg
             .modal-content
-              .modal-header
+             .modal-header
                button.close(type='button', data-dismiss='modal') x
                h4.modal-title Confirm to Cancel Appointment
              .modal-body
@@ -146,6 +146,6 @@ ul.nav.nav-tabs
                 #date.p Appointment Detail
                   
              .modal-footer
-               button.btn.btn-default(type='submit') Submit
-               button.btn.btn-default(type='button', data-dismiss='modal') Close
+               button.btn.btn-default.btn-cancel(type='submit') Submit
+               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close
 

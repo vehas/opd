@@ -34,9 +34,12 @@ h1 login
                 a(data-toggle='tab', href='#regis') Register
              .tab-content
               #login.tab-pane.fade.in.active
+                   br
                    input#username.form-control(type='text', name='username', tabindex='1', placeholder='Username')
+                   br
                     
                    input#password.form-control(type='password', name='password', tabindex='2', placeholder='Password')
+                   br
                   
                    
                    .row
@@ -44,22 +47,24 @@ h1 login
                        input#login-submit.form-control.btn.btn-login(type='submit', name='login-submit', tabindex='4', value='Log In')
 
               #regis.tab-pane.fade
+                       br
                        input#name.form-control(type='text', name='username', placeholder='Name')
-                       
+                       br
                        input#surname.form-control(type='text', name='username', placeholder='Surname')
-
-                       input#dateofbirth.form-control.datepicker(type='text', name='username', placeholder='Date of birth')
-
+                       br
+                       input#dateofbirth.form-control.datepicker(type='text', name='username', placeholder='  Date of birth (Select Date)')
+                       br
                        input#tel.form-control(type='text', name='username', placeholder='Telophone Number')
-
+                       br
                        input#citizenid.form-control(type='text', name='username', placeholder='Citizen ID')
-
+                       br
                        input#email.form-control(type='email', name='email', placeholder='Email Address')
+                       br
                      
                        input#password.form-control(type='password', name='password', placeholder='Password')
-                    
+                       br
                        input#confirm-password.form-control(type='password', name='confirm-password', placeholder='Confirm Password')
-                    
+                       br
                        .row
                          .col-sm-6.col-sm-offset-3
                            input#register-submit.form-control.btn.btn-register(type='submit', name='register-submit', tabindex='4', value='Register Now')
