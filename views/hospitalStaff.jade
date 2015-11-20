@@ -97,15 +97,50 @@ h1 hospitalStaff
               
                  input#depart.form-control(type='text', placeholder='ในกรณีที่ต้องการระบุแพทย์เฉพาะทางอื่นๆ')
 
-                 //.form-group
-                   label(for='pwd') Password:
-                   input#pwd.form-control(type='password', placeholder='Enter password')
                 
-
               .modal-footer
                 //button.btn.btn-default(type='submit') Submit
-                #ChooseTime.button.btn.btn-default.btn-lg(type='button', data-toggle='modal', data-dismiss='modal', data-target='#PostponeModal') Submit
+                #ChooseTime.button.btn.btn-default.btn-lg(type='button', data-toggle='modal', data-dismiss='modal', data-target='#PostponeModalhs') Submit
                 button.btn.btn-default(type='button', data-dismiss='modal') Close
+          
+                 // postpone Modal
+           #PostponeModalhs.modal.fade(role='dialog')
+            .modal-dialog.modal-lg
+             .modal-content
+              .modal-header
+               button.close(type='button', data-dismiss='modal') ×
+               h4.modal-title Choose Appointment Time
+              .modal-body
+
+                 //h2 Vertical (basic) Form
+                #SChoooseDate.p.lead Appointment Date is dd/mm/yyyy.
+                .p.lead Other Date . . .
+                .list-group
+                  button.list-group-item(type='button') d1/m1/1111
+                  button.list-group-item(type='button') d2/m2/2222
+                  button.list-group-item(type='button') d3/m3/3333
+                  button.list-group-item(type='button') d4/m4/3333
+                  
+              .modal-footer
+               button.btn.btn-default(type='submit') Submit
+               button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+              // Cancle Modal
+           #CancelModalhs.modal.fade(role='dialog')
+            .modal-dialog.modal-lg
+             .modal-content
+              .modal-header
+               button.close(type='button', data-dismiss='modal') x
+               h4.modal-title Confirm to Cancel Appointment
+              .modal-body
+                h4.modal-title Confirm to Cancel Appointment
+                #date.p Appointment Detail
+                  
+              .modal-footer
+               button.btn.btn-default.btn-cancel(type='submit') Submit
+               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close 
+
+
 
 
 
