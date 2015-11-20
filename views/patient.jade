@@ -1,13 +1,15 @@
 include ./head
 h1 patient
-
-ul.nav.nav-tabs
+.panel.panel-login
+ .panel-heading
+   ul.nav.nav-tabs
               li.active
+
                 a#patienttab(data-toggle='tab', href='#login') Patient
-             
-.tab-content
+
+   .tab-content
         
-        #login.tab-pane.fade.in.active
+        #patientMain.tab-pane.fade.in.active
           .container
            .row
              //#make.btn.btn-info Make Appointment
