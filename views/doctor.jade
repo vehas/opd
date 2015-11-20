@@ -1,6 +1,6 @@
 include ./head
 h1 doctor
-table
+table.table.doctor-table
   thead
     tr
       td name
@@ -10,7 +10,7 @@ table
   tbody
     each par in patient
       tr
-        td 
+        td
           a(href='/doctor/patient/#{par.name}') #{par.name}
         td 
           a(href='/doctor/patient/#{par.name}') #{par.surname}
