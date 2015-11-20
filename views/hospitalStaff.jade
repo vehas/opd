@@ -20,6 +20,8 @@ h1 hospitalStaff
                  .col-md-8.col-md-offset-7
                     br
                     #pam.button.btn.btn-success.btn-me(type='button', data-toggle='modal', data-target='#PamModal') summit
+              #impDocSch.tab-pane.fade.in
+                
 
                     
                 // pam Modal
@@ -30,9 +32,11 @@ h1 hospitalStaff
                button.close(type='button', data-dismiss='modal') ×
                h4.modal-title Patient Appointment Manager
              .modal-body
-              br
+              
               .row
-                #makehs.button.btn.btn-info.btn-md(type='button', data-toggle='modal', data-target='#makeModalhs') Make Appointment
+                #makehs.button.btn.btn-info.btn-md(type='button', data-toggle='modal', data-target='#makeModalhs',style="float: right ;margin:0 20 0 10;") Make Appointment
+              br
+          
               .row
                .col-md-8.col-md-offset-2
                 .panel.panel-default
@@ -97,15 +101,56 @@ h1 hospitalStaff
               
                  input#depart.form-control(type='text', placeholder='ในกรณีที่ต้องการระบุแพทย์เฉพาะทางอื่นๆ')
 
-                 //.form-group
-                   label(for='pwd') Password:
-                   input#pwd.form-control(type='password', placeholder='Enter password')
                 
-
               .modal-footer
                 //button.btn.btn-default(type='submit') Submit
-                #ChooseTime.button.btn.btn-default.btn-lg(type='button', data-toggle='modal', data-dismiss='modal', data-target='#PostponeModal') Submit
+                #ChooseTime.button.btn.btn-default.btn-md(type='button', data-toggle='modal', data-dismiss='modal', data-target='#PostponeModalhs') Submit
                 button.btn.btn-default(type='button', data-dismiss='modal') Close
+          
+                 // postpone Modal
+           #PostponeModalhs.modal.fade(role='dialog')
+            .modal-dialog.modal-md
+             .modal-content
+              .modal-header
+               button.close(type='button', data-dismiss='modal') ×
+               h4.modal-title Choose Appointment Time
+              .modal-body
+                h4.modaltitle 
+                 //h2 Vertical (basic) Form
+                
+          
+                
+                
+              
+                #listotherdate.list-group.addspace
+                  label เวลานัดหมายที่เร็วที่สุด :
+                  button.list-group-item(type='button') d1/m1/1111
+                  br
+                  label เวลานัดหมายอื่นๆ :
+                  button.list-group-item(style="margin-bottom: 10px", type='button') d2/m2/2222
+                  button.list-group-item(style="margin-bottom: 10px",type='button') d3/m3/3333
+                  button.list-group-item(type='button') d4/m4/3333
+                  
+              .modal-footer
+               button.btn.btn-default(type='submit') Submit
+               button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+              // Cancle Modal
+           #CancelModalhs.modal.fade(role='dialog')
+            .modal-dialog.modal-lg
+             .modal-content
+              .modal-header
+               button.close(type='button', data-dismiss='modal') x
+               h4.modal-title Confirm to Cancel Appointment
+              .modal-body
+                h4.modal-title Confirm to Cancel Appointment
+                #date.p Appointment Detail
+                  
+              .modal-footer
+               button.btn.btn-default.btn-cancel(type='submit') Submit
+               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close 
+
+
 
 
 
