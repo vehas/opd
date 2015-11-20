@@ -1,0 +1,16 @@
+table, th,td, tr{
+  border: 1px solid black;
+}
+body{
+  background-color:  #ccc;
+}
+.nav-bar{
+  background-color:  green;
+
+}
+.medicine{
+  background-color: pink;
+}
+.name{
+  background-color:  yellow;
+}
