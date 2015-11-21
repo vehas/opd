@@ -8,10 +8,48 @@
 	width:100px;height:35px;
 }
 
-.btn-cancel{
-	background: white;
+.btn-postpone {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 7;
+  border-radius: 3px;
+  border: solid #c4c4c4 1px;
+  color: #606060;
 
+  background: #d9d9d9;
+  padding: 8px 20px 10px 20px;
+  text-decoration: none;
 }
+
+.btn-postpone:hover {
+  background: #c4c4c4;
+  border: solid #b5b5b5 1px;
+
+  text-decoration: none;
+}
+
+.btn-cancel {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 7;
+  border-radius: 3px;
+  border: solid #ff6666 1px;
+  color: #ffffff;;
+
+  background: #ff7a7a;
+  padding: 8px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn-cancel:hover {
+  background: #ff6b6b;
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .addspace{
 	margin: 0 10 0 10
 }
+
+.color-grey{
+	color: #757575;
+}
+

@@ -2,11 +2,11 @@ table, th,td, tr{
   border: 1px solid black;
 }
 h1{
-	background-image: url(../../dist/image/Silver-Blur-Background-Wallpaper.jpg);
+	/*background-image: url(../../dist/image/Silver-Blur-Background-Wallpaper.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-	padding-top: 100;
-	padding-bottom: 50;
+	padding-top: 100;*/
+	padding-bottom: 87px;
 }
 body{
   background-color:  #ccc;
@@ -22,7 +22,15 @@ body{
   background-color:  yellow;
 }
 .pa {
-  ;
-';'
+}
 
+.header{
+  background-image: url(../../dist/image/Silver-Blur-Background-Wallpaper.jpg);
+  background-size: 100% 100%;
+    background-repeat: no-repeat;
+  padding-bottom: 100px;
+}
+
+.body{
+  margin-top: -80px;
 }
