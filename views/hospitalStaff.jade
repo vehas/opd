@@ -20,6 +20,16 @@ h1 hospitalStaff
                  .col-md-8.col-md-offset-7
                     br
                     #pam.button.btn.btn-success.btn-me(type='button', data-toggle='modal', data-target='#PamModal') summit
+              #impDocSch.tab-pane.fade.in
+                br
+                .row
+                 .col-md-6.col-md-offset-3
+                   input#DocName.form-control(type='text', name='citizenId', tabindex='1', placeholder='Doctor Name')
+                .row
+                 .col-md-8.col-md-offset-7
+                    br
+                    #pam.button.btn.btn-success.btn-me(type='button', data-toggle='modal', data-target='#DocCalModal') summit
+                    
 
                     
                 // pam Modal
@@ -30,20 +40,21 @@ h1 hospitalStaff
                button.close(type='button', data-dismiss='modal') ×
                h4.modal-title Patient Appointment Manager
              .modal-body
+              
+              .row
+                #makehs.button.btn.btn-info.btn-md(type='button', data-toggle='modal', data-target='#makeModalhs',style="float: right ;margin:0 20 0 10;") Make Appointment
               br
+          
               .row
-                //#make.btn.btn-info Make Appointment
-                #make.button.btn.btn-info.btn-md(type='button', data-toggle='modal', data-target='#makeModal') Make Appointment
-              .row
-                .col-md-8.col-md-offset-2
-                  .panel.panel-default
+               .col-md-8.col-md-offset-2
+                .panel.panel-default
+                 .row
+                  #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
+                  .col-sm-3
                     .row
-                      #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
-                       .col-sm-3
-                        .row
-                          #postpone.button.btn.btn-success.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModal') Postpone
-                        .row
-                          #cancel.button.btn.btn-warning.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModal') Cancel
+                      #postponehs.button.btn.btn-success.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModalhs') Postpone
+                    .row
+                      #cancelhs.button.btn.btn-warning.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModalhs') Cancel
                     
 
               .row
@@ -56,6 +67,134 @@ h1 hospitalStaff
                      #postpone.btn.btn-success.btn-pc.col Postpone
                    .row
                      #cancel.btn.btn-warning.btn-pc Cancel
+             .modal-footer
+               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close
+                 
+
+
+
+
+           #makeModalhs.modal.fade(role='dialog')
+            .modal-dialog.modal-lg
+             .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal') ×
+                h4.modal-title Make New Appointment
+              .modal-body
+
+                 //h2 Vertical (basic) Form
+                 form(role='form')
+                 .form-group
+                   label(for='Symtom') Symtom:
+                   input#Symtom.form-control(type='text', placeholder='กรอกอาการป่วย')
+                 .form-group
+                   label(for='Cause') Cause:
+                   input#Cause.form-control(type='text', placeholder='กรอกสาเหตุหากมี')
+                 .form-group
+                   label(for='Doctor') Doctor Name:
+                   input#Docname.form-control(type='text', placeholder='ในกรณีที่ต้องการระบุแพทย์ที่ต้องการพบ')
+                
+                 .form-group
+                   label(for='sel1') Department (select one):
+                   select#sel1.form-control
+                     option อายุรกรรม
+                     option ศัลยกรรม
+                     option กุมารเวชกรรม
+                     option สูตินรีเวช
+                     option ทันตกรรม
+                     option เวชปฎิบัติ
+                     option แพทย์เฉพาะทางอื่นๆ
+                 
+
+              
+                 input#depart.form-control(type='text', placeholder='ในกรณีที่ต้องการระบุแพทย์เฉพาะทางอื่นๆ')
+
+                
+              .modal-footer
+                //button.btn.btn-default(type='submit') Submit
+                #ChooseTime.button.btn.btn-default.btn-md(type='button', data-toggle='modal', data-dismiss='modal', data-target='#PostponeModalhs') Submit
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+          
+                 // postpone Modal
+           #PostponeModalhs.modal.fade(role='dialog')
+            .modal-dialog.modal-md
+             .modal-content
+              .modal-header
+               button.close(type='button', data-dismiss='modal') ×
+               h4.modal-title Choose Appointment Time
+              .modal-body
+                h4.modaltitle 
+                 //h2 Vertical (basic) Form
+                
+          
+                
+                
+              
+                #listotherdate.list-group.addspace
+                  label เวลานัดหมายที่เร็วที่สุด :
+                  button.list-group-item(type='button') d1/m1/1111
+                  br
+                  label เวลานัดหมายอื่นๆ :
+                  button.list-group-item(style="margin-bottom: 10px", type='button') d2/m2/2222
+                  button.list-group-item(style="margin-bottom: 10px",type='button') d3/m3/3333
+                  button.list-group-item(type='button') d4/m4/3333
+                  
+              .modal-footer
+               button.btn.btn-default(type='submit') Submit
+               button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+              // Cancle Modal
+           #CancelModalhs.modal.fade(role='dialog')
+            .modal-dialog.modal-lg
+             .modal-content
+              .modal-header
+               button.close(type='button', data-dismiss='modal') x
+               h4.modal-title Confirm to Cancel Appointment
+              .modal-body
+                h4.modal-title Confirm to Cancel Appointment
+                #date.p Appointment Detail
+                  
+              .modal-footer
+               button.btn.btn-default.btn-cancel(type='submit') Submit
+               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close 
+
+               //DocCal Modal
+           #DocCalModal.modal.fade(role='dialog')
+            .modal-dialog.modal-lg
+             .modal-content
+              .modal-header
+               button.close(type='button', data-dismiss='modal') x
+               h4.modal-title Doctor Calendar
+              .modal-body
+                  .panel.panel-login
+                     .calendar
+                 script.calendarTemplate(type="text/template")
+                     .clndr
+                       .row
+                         .clndr-controls.btn-group
+                           button.clndr-previous-button.btn.btn-default previous <
+                           button.mounth.btn.btn-default <%= month %> <%= year %>
+                           button.clndr-next-button.btn.btn-default > next
+                       table.clndr-grid.table
+                         .days-of-the-weeks.days.
+                           <% _.each(daysOfTheWeek, function(day) { %>
+                           <span class="cell header-day sus"><%= day %></span>
+                           <% }); %>
+                         .days
+                           <% _.each(days, function(day) { %>
+                           <span class="cell <%= day.classes %><%if (typeof day.events[0] != 'undefined'){%>                    ${day.events[0].period} <% }%><%if (typeof day.events[1] != 'undefined'){%> ${day.events[1].period} <% }%>"><%= day.day %></span>
+                           <% if(parseInt(day.day)%7===0) {%> <br> <%} }); %>
+                 script(src='../../dist/js/doctor-Calendar.js') 
+                  
+              .modal-footer
+               button.btn.btn-default.btn-cancel(type='submit') Submit
+               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close 
+
+
+
+
+
+
 
 
 
