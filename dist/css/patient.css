@@ -7,10 +7,11 @@
 	margin: 10 0 10 0;
 	width:100px;height:35px;
 }
-#patienttab {
-	padding: 10 30 10 30;
-	font-size: 18;
-}
+
 .btn-cancel{
 	background: white;
+
+}
+.addspace{
+	margin: 0 10 0 10
 }
