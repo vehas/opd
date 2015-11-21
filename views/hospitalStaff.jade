@@ -1,8 +1,13 @@
 include ./head
-h1 hospitalStaff
+
 
              //- .row
              //-   .col-md-5.col-md-offset-3
+br
+br
+.container
+      .row
+        .col-md-8.col-md-offset-2
           .panel.panel-login
             .panel-heading
              ul.nav.nav-tabs
@@ -11,11 +16,12 @@ h1 hospitalStaff
               li
                 a(data-toggle='tab', href='#impDocSch') Import Doctor Schedule
              .tab-content
+
               #pAppMan.tab-pane.fade.in.active
                 br
                 br
                 .row
-                 .col-md-6.col-md-offset-3
+                 .col-md-8.col-md-offset-2
                    input#CitizenID.form-control(type='text', name='citizenId', tabindex='1', placeholder='Patient CitizenID')
                 .row
                  .col-md-8.col-md-offset-7
@@ -25,7 +31,7 @@ h1 hospitalStaff
                 br
                 br
                 .row
-                 .col-md-6.col-md-offset-3
+                 .col-md-8.col-md-offset-2
                    input#DocName.form-control(type='text', name='citizenId', tabindex='1', placeholder='Doctor Name')
                 .row
                  .col-md-8.col-md-offset-7
