@@ -1,19 +1,70 @@
 include ./head
-include ./headuser
 
-h2 #{page}
-table
+<ul class="nav nav-tabs"><li class="active" ><a href="/doctor/patient/macro">Home</a></li></ul>
+<div class="row">
+<div class="col-xs-3 col-sm-1"></div>
+<div class="col-xs-12 col-sm-10" >
+h2.head-doc #{page}
+table.table.table-hover.table-x
   thead
     tr
-      td name
-      td surname
-      td gender
-      td age
+      th name
+      th surname
+      th gender
+      th age
   tbody
     each par in patient
       tr
         td
-          a(href="/nurse/patient/#{par.name}") #{par.name}
-        td #{par.surname}
-        td #{par.gender}
-        td #{par.age}
+          a(data-toggle="modal" href="#myModal") #{par.name}
+        td 
+          a(data-toggle="modal" href="#myModal") #{par.surname}
+        td 
+          a(data-toggle="modal" href="#myModal") #{par.gender}
+        td 
+          a(data-toggle="modal" href="#myModal") #{par.age}
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog">
+    
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title head-doc2">Patient Record</h4>
+</div>
+<div class="modal-body">
+
+<div class="tab-content">
+<div id="home" class="tab-pane fade in active">
+h4.head-doc2 Modus Ponen
+ul.list-group 
+
+      span#basic-addon1.input-group-addon Weight(kg)
+      li.list-group-item    
+        input.name(placeholder='Please Enter Weight' class="form-control" id="weight")
+      span#basic-addon1.input-group-addon Height(m)
+      li.list-group-item
+          input.name(placeholder='Please Enter Height' class="form-control" id="height" )
+      span#basic-addon1.input-group-addon Temperature(celcius)
+      li.list-group-item
+        input.name(placeholder='Please Enter Temperature' class="form-control" id="temp" )
+      span#basic-addon1.input-group-addon Pulse(bpm)
+      li.list-group-item
+        input.name(placeholder='Please Enter Pulse Rate' class="form-control" id="pulse")
+      span#basic-addon1.input-group-addon BloodPressure(mmHg)
+      li.list-group-item
+        input.name(placeholder='Please Enter BloodPressure' class="form-control" id="blood")
+
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-success">Submit</button>
+</div>
+</div>
+</div>
+</div>
+script(src='../dist/js/nurse.js')

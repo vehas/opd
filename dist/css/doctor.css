@@ -1,0 +1,64 @@
+.table-x{
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 640px; 
+border-collapse: 
+collapse; border-spacing: 0; 
+}
+.table-x tr{
+ border: 1px solid  #F7E7CE;
+}
+.table-x td{
+ border: 1px solid  #F7E7CE; /* No more visible border */
+height: 30px; 
+}
+.table-x th{
+border: 1px solid  #F7E7CE; /* No more visible border */
+height: 30px;  /* Simple transition for hover effect */
+background: #F7E7CE;  /* Darken header a bit */
+font-weight: bold;
+text-transform: uppercase;
+}
+.head-doc{
+	margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-weight: bold; 
+	font-size: 28px;
+	line-height: 30px;
+	text-transform: uppercase;
+
+}
+.btn-custom{
+background: #F7E7CE; 
+}
+#basic-addon1{
+	background: #F7E7CE;
+}
+.head-doc2{
+	margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-weight: bold; 
+	font-size: 22px;
+	text-transform: uppercase;
+
+}
+
+.doctor-headList{
+	background-color: #ccccff;
+}
+.midicine > .name{
+	background-color: #f3f;
+	margin-left: 2px;
+}
+.midicine > .quality{
+	background-color: #f3f;
+	margin-left: 2px;
+}
+.midicine > .col-md-3{
+	background-color: #f3f;
+	padding-left: 2px;
+}
+.list-group-item{
+	background-color: #c5c5c7;
+	text-align: center;
+}

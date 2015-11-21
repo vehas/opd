@@ -1,17 +1,18 @@
 include ./head
+body
 <ul class="nav nav-tabs"><li ><a href="/doctor/patient/macro">Home</a></li>
 <li class="active"><a href="/doctor">Patient List</a></li></ul>
 <div class="row">
 <div class="col-xs-3 col-sm-1"></div>
 <div class="col-xs-12 col-sm-10" >
-h3 Patient List
-table.table.table-bordered
+h3.head-doc Patient List
+table.table.table-hover.table-x
   thead
     tr
-      td name
-      td surname
-      td gender
-      td age
+      th name
+      th surname
+      th gender
+      th age
   tbody
     each par in patient
       tr
@@ -35,7 +36,7 @@ table.table.table-bordered
 <div class="modal-content">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal">&times;</button>
-<h4 class="modal-title">Patient Detail</h4>
+<h4 class="modal-title head-doc2">Patient Detail</h4>
 </div>
 <div class="modal-body">
 <ul class="nav nav-tabs">
@@ -45,14 +46,40 @@ table.table.table-bordered
 
 <div class="tab-content">
 <div id="home" class="tab-pane fade in active">
-<h3>Patient Detail</h3>
+<h3 class="head-doc2">Patient Detail</h3>
+
+ul.list-group
+      span#basic-addon1.input-group-addon CitizenID
+      li.list-group-item #{parCitizenID} 19001900191
+      span#basic-addon1.input-group-addon Name
+      li.list-group-item #{patientName} Max
+      span#basic-addon1.input-group-addon Weight(kg)
+      li.list-group-item #{parWeight} 99
+      span#basic-addon1.input-group-addon Height(m)
+      li.list-group-item #{parHeight} 199
+      span#basic-addon1.input-group-addon Temperature(celcius)
+      li.list-group-item #{parTemperature} 33
+      span#basic-addon1.input-group-addon Pulse(bpm)
+      li.list-group-item #{parPulse} 129
+      span#basic-addon1.input-group-addon Blood(cc)
+      li.list-group-item #{parBlood} 55
+      span#basic-addon1.input-group-addon Pressure(mmHg)
+      li.list-group-item #{parPressure} 77 
+      span#basic-addon1.input-group-addon Symtomp
+      li.list-group-item #{parSymtomp} love never die
+      span#basic-addon1.input-group-addon Cause
+      li.list-group-item #{parCause} love die
 
 </div>
+
 <div id="diag" class="tab-pane fade">
+<h3 class="head-doc2">Diagnosis</h3>
+
 <div class="form-group">
 <label for="disease_id">Disease ID:</label>
 <input type="text" class="form-control" id="disease_id" placeholder="Enter disease id">
 </div>
+
 <div class="form-group" id='medicineList' >
 <div class="form-group">
 <label for="pwd">medicine:</label>
@@ -69,11 +96,12 @@ table.table.table-bordered
       button.btn.btn-info.add add
 </div>
 </div>
+
 </div>
 </div>
 <div class="modal-footer">
-<button type="button class="btn btn-default" data-dismiss="modal">Close Curtain</button>
-</div>
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-success">Submit</button>
 </div>
 </div>
 </div>

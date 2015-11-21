@@ -7,10 +7,49 @@
 	margin: 10 0 10 0;
 	width:100px;height:35px;
 }
-#patienttab {
-	padding: 10 30 10 30;
-	font-size: 18;
+
+.btn-postpone {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 7;
+  border-radius: 3px;
+  border: solid #aaaaaa 1px;
+  color: #606060;
+  background: #ffffff;
+  /*background: #d9d9d9;*/
+  padding: 8px 20px 10px 20px;
+  text-decoration: none;
 }
-.btn-cancel{
-	background: white;
+
+.btn-postpone:hover {
+  background: #dddddd;
+  border: solid #999999 1px;
+  color: #333333;
+  text-decoration: none;
 }
+
+.btn-cancel {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 7;
+  border-radius: 3px;
+  border: solid #ff1111 1px;
+  color: #ffffff;;
+
+  background: #ff7a7a;
+  padding: 8px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn-cancel:hover {
+  background: #FF6060;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.addspace{
+	margin: 0 10 0 10
+}
+
+.color-grey{
+	color: #757575;
+}
+

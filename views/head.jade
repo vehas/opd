@@ -3,17 +3,24 @@ html
     title=page
     //- link(rel='stylesheet' type='text/css' href='../../dist/normalize.css')
     // link(rel='stylesheet' type='text/css' href='../../dist/style.css')
-    // link(rel='stylesheet' type='text/css' href='../../dist/doctor.css')
+    link(rel='stylesheet' type='text/css' href='../../dist/css/doctor.css')
     // link(rel="stylesheet" href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css') 
 
 
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
-    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    //- script(src="https://ajax.googleapifs.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+    script(src='../../dist/js/lib/jquery-1.11.3.min.js')
+    //- script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    script(src="../../dist/js/lodash.min.js")
+    script(src="../../dist/js/moment.js")
+    script(src="../../dist/js/clndr.js")
     link(rel='stylesheet' type='text/css' href='../../dist/css/normalize.css')
     link(rel='stylesheet' type='text/css' href='../../dist/css/style.css')
-    link(rel="stylesheet" href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    link(rel='stylesheet' type='text/css' href='../../dist/css/calendar.css')
+    //- link(rel="stylesheet" href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
 
-    script(src='../../dist/js/lib/jquery-1.11.3.min.js')
+
+    //- script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+
 
     //-bootstrap
     link(href='../../dist/css/lib/bootstrap.min.css' rel="stylesheet" type='text/css')
@@ -39,9 +46,18 @@ html
   
     link()
   body
-    if typeof account === undefined
-      div #{account.name}
-      div #{account.id}
-      //- div #{!unauthenedPage}
-      hr
+
+  .row.header
+    .col-xs-6
+      img(src='../../dist/image/Hospital_Logo.png' style="padding: 20 0 0 20")
+    .col-xs-6
+      div(style="padding: 20")
+        p(style='text-align:right') บุญจิรา อังสุมาลี
+        p(style='text-align:right') 123456789
+        button.btn.btn-default(type = 'button' style="float : right") log out
+        if typeof account === undefined
+          div #{account.name}
+          div #{account.id}
+          //- div #{!unauthenedPage}
+          hr
       <!-- Latest compiled and minified CSS -->
