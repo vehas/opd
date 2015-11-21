@@ -12,18 +12,18 @@
   -webkit-border-radius: 0;
   -moz-border-radius: 7;
   border-radius: 3px;
-  border: solid #c4c4c4 1px;
+  border: solid #aaaaaa 1px;
   color: #606060;
-
-  background: #d9d9d9;
+  background: #ffffff;
+  /*background: #d9d9d9;*/
   padding: 8px 20px 10px 20px;
   text-decoration: none;
 }
 
 .btn-postpone:hover {
   background: #c4c4c4;
-  border: solid #b5b5b5 1px;
-
+  border: solid #999999 1px;
+  color: #111111;
   text-decoration: none;
 }
 
@@ -31,7 +31,7 @@
   -webkit-border-radius: 0;
   -moz-border-radius: 7;
   border-radius: 3px;
-  border: solid #ff6666 1px;
+  border: solid #ff1111 1px;
   color: #ffffff;;
 
   background: #ff7a7a;
@@ -40,7 +40,7 @@
 }
 
 .btn-cancel:hover {
-  background: #ff6b6b;
+  background: #FF6060;
   color: #ffffff;
   text-decoration: none;
 }
