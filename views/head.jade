@@ -39,9 +39,18 @@ html
   
     link()
   body
-    if typeof account === undefined
-      div #{account.name}
-      div #{account.id}
-      //- div #{!unauthenedPage}
-      hr
+
+  .row.header
+    .col-xs-6
+      img(src='../../dist/image/Hospital_logo.png' style="padding: 20 0 0 20")
+    .col-xs-6
+      div(style="padding: 20")
+        p(style='text-align:right') บุญจิรา อังสุมาลี
+        p(style='text-align:right') 123456789
+        button.btn.btn-default(type = 'button' style="float : right") log out
+        if typeof account === undefined
+          div #{account.name}
+          div #{account.id}
+          //- div #{!unauthenedPage}
+          hr
       <!-- Latest compiled and minified CSS -->
