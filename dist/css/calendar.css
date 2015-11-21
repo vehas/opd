@@ -1,0 +1,133 @@
+.calendar{
+  /*background-color: #92b96a;*/
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.noselect {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+
+  -moz-user-select: none;
+  /* Firefox */
+
+  -ms-user-select: none;
+  /* IE10+ */
+
+}
+
+.calendar{
+  margin: auto;
+  width: 730px;
+  padding: 15px;
+}
+.clndr row{
+  width: 730px;
+}
+.clndr-controls{
+  float: none;
+  margin: 0 auto;
+  /*width: 700px;*/
+  padding : 15px 15px 10px 15px;
+}
+.clndr-previous-button{
+  min-width: 200px;
+}
+.mounth{
+  min-width: 300px;
+}
+.clndr-next-button{
+  min-width: 200px;
+}
+.days .cell{
+  background-color: #ffffff;
+  min-width: 100px;
+  /*max-width: 110px;*/
+  display: block;
+  float: left;
+  min-height: 60px;
+  text-align: right;
+  border-bottom: 1px solid;
+}
+.days-of-the-weeks .cell{
+  min-height: 30px;
+}
+.days .cell.event{
+  background-color: rgb(156, 162, 155);
+}
+.days .cell.today{
+  background-color: rgb(102, 111, 100);
+}
+.bg{
+  background-color: #b6b6b6;
+}
+.cell.event.morning::after{
+   content: "";
+   display: block;
+   width: 30px;
+   height: 10px;
+   background-color: #fff;
+   /*margin: 12px 10px;*/
+   /*bottom: 1px;*/
+   position: relative;
+   top: 35px;
+   left: 15px;
+   float: left;
+   border-radius: 25px 0 0 25px ;
+}
+.cell.event.noon::after{
+   content: "";
+   display: block;
+   width: 30px;
+   height: 10px;
+   background-color: #fff;
+   /*margin: 12px 10px;*/
+   /*bottom: 1px;*/
+   position: relative;
+   top: 35px;
+   left: 55px;
+   float: left;
+   border-radius: 0 25px 25px 0 ;
+}
+.cell.event.morning.noon::before{
+   content: "";
+   display: block;
+   width: 30px;
+   height: 10px;
+   background-color: #fff;
+   /*margin: 12px 10px;*/
+   /*bottom: 1px;*/
+   position: relative;
+   top: 35px;
+   left: 15px;
+   float: left;
+   border-radius: 25px 0 0 25px ;
+}
+.cell.event.noon.morning::after{
+   content: "";
+   display: block;
+   width: 30px;
+   height: 10px;
+   background-color: #fff;
+   /*margin: 12px 10px;*/
+   /*bottom: 1px;*/
+   position: relative;
+   top: 35px;
+   left: 20px;
+   float: left;
+   border-radius: 0 25px 25px 0 ;
+}
