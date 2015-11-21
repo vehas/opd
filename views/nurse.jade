@@ -44,28 +44,27 @@ ul.list-group
 
       span#basic-addon1.input-group-addon Weight(kg)
       li.list-group-item    
-        input.name(placeholder='Please Enter Weight' class="form-control" )
+        input.name(placeholder='Please Enter Weight' class="form-control" id="weight")
       span#basic-addon1.input-group-addon Height(m)
       li.list-group-item
-          input.name(placeholder='Please Enter Height' class="form-control" )
+          input.name(placeholder='Please Enter Height' class="form-control" id="height" )
       span#basic-addon1.input-group-addon Temperature(celcius)
       li.list-group-item
-        input.name(placeholder='Please Enter Temperature' class="form-control" )
+        input.name(placeholder='Please Enter Temperature' class="form-control" id="temp" )
       span#basic-addon1.input-group-addon Pulse(bpm)
       li.list-group-item
-        input.name(placeholder='Please Enter Pulse Rate' class="form-control" )
+        input.name(placeholder='Please Enter Pulse Rate' class="form-control" id="pulse")
       span#basic-addon1.input-group-addon BloodPressure(mmHg)
       li.list-group-item
-        input.name(placeholder='Please Enter BloodPressure' class="form-control")
-       button.btn.btn-custom Submit
-
-  
+        input.name(placeholder='Please Enter BloodPressure' class="form-control" id="blood")
 
 </div>
 </div>
 <div class="modal-footer">
-<button type="button class="btn btn-default" data-dismiss="modal">Close </button>
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-success">Submit</button>
 </div>
 </div>
 </div>
 </div>
+script(src='../dist/js/nurse.js')

@@ -1,8 +1,13 @@
 include ./head
-h1 hospitalStaff
+
 
              //- .row
              //-   .col-md-5.col-md-offset-3
+br
+br
+.container
+      .row
+        .col-md-8.col-md-offset-2
           .panel.panel-login
             .panel-heading
              ul.nav.nav-tabs
@@ -11,10 +16,12 @@ h1 hospitalStaff
               li
                 a(data-toggle='tab', href='#impDocSch') Import Doctor Schedule
              .tab-content
+
               #pAppMan.tab-pane.fade.in.active
                 br
+                br
                 .row
-                 .col-md-6.col-md-offset-3
+                 .col-md-8.col-md-offset-2
                    input#CitizenID.form-control(type='text', name='citizenId', tabindex='1', placeholder='Patient CitizenID')
                 .row
                  .col-md-8.col-md-offset-7
@@ -22,8 +29,9 @@ h1 hospitalStaff
                     #pam.button.btn.btn-success.btn-me(type='button', data-toggle='modal', data-target='#PamModal') summit
               #impDocSch.tab-pane.fade.in
                 br
+                br
                 .row
-                 .col-md-6.col-md-offset-3
+                 .col-md-8.col-md-offset-2
                    input#DocName.form-control(type='text', name='citizenId', tabindex='1', placeholder='Doctor Name')
                 .row
                  .col-md-8.col-md-offset-7
@@ -33,8 +41,8 @@ h1 hospitalStaff
 
                     
                 // pam Modal
-           #PamModal.modal.fade(role='dialog')
-            .modal-dialog.modal-lg
+         #PamModal.modal.fade(role='dialog')
+          .modal-dialog.modal-lg
             .modal-content
              .modal-header
                button.close(type='button', data-dismiss='modal') ×
@@ -42,33 +50,69 @@ h1 hospitalStaff
              .modal-body
               
               .row
-                #makehs.button.btn.btn-info.btn-md(type='button', data-toggle='modal', data-target='#makeModalhs',style="float: right ;margin:0 20 0 10;") Make Appointment
+                #makehs.button.btn.btn-info.btn-md(type='button', data-toggle='modal', data-target='#makeModalhs',style="float: right ;margin:0 20 0 10;") Add +
               br
           
               .row
                .col-md-8.col-md-offset-2
                 .panel.panel-default
                  .row
-                  #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
+                  #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;")
+                   .row(style="margin: 0 0 0 10;")
+                     .col-md-2 เวลา
+                     .col-xs-1 :
+                     .col-md-5#time.color-grey 10 : 00
+                   .row(style="margin: 0 0 0 10;")
+                    .col-md-2 วันที่
+                    .col-xs-1 :
+                    .col-md-5#date.color-grey 25 / 12 / 58
+                   .row(style="margin: 0 0 0 10;")
+                    .col-md-2 แผนก
+                    .col-xs-1 :
+                    .col-md-5#department.color-grey อายุรกรรม
+                   .row(style="margin: 0 0 0 10;")
+                    .col-md-2 แพทย์
+                    .col-xs-1 :
+                    .col-md-5#doctor.color-grey พญ.ไพลิน จินดามณี
                   .col-sm-3
-                    .row
-                      #postponehs.button.btn.btn-success.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModalhs') Postpone
-                    .row
-                      #cancelhs.button.btn.btn-warning.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModalhs') Cancel
+                   .row
+                    #postpone.button.btn.btn-postpone.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModal') Postpone
+                    //#postpone.btn.btn-success.btn-pc.col Postpone
+                   .row
+                    //#cancel.btn.btn-warning.btn-pc Cancel
+                    #cancel.button.btn.btn-cancel.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModal') Cancel
                     
 
               .row
                .col-md-8.col-md-offset-2
                 .panel.panel-default
                  .row
-                  #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
+                  #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;")
+                   .row(style="margin: 0 0 0 10;")
+                     .col-md-2 เวลา
+                     .col-xs-1 :
+                     .col-md-5#time.color-grey 10 : 00
+                   .row(style="margin: 0 0 0 10;")
+                    .col-md-2 วันที่
+                    .col-xs-1 :
+                    .col-md-5#date.color-grey 25 / 12 / 58
+                   .row(style="margin: 0 0 0 10;")
+                    .col-md-2 แผนก
+                    .col-xs-1 :
+                    .col-md-5#department.color-grey อายุรกรรม
+                   .row(style="margin: 0 0 0 10;")
+                    .col-md-2 แพทย์
+                    .col-xs-1 :
+                    .col-md-5#doctor.color-grey พญ.ไพลิน จินดามณี
                   .col-sm-3
                    .row
-                     #postpone.btn.btn-success.btn-pc.col Postpone
+                    #postpone.button.btn.btn-postpone.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModal') Postpone
+                    //#postpone.btn.btn-success.btn-pc.col Postpone
                    .row
-                     #cancel.btn.btn-warning.btn-pc Cancel
+                    //#cancel.btn.btn-warning.btn-pc Cancel
+                    #cancel.button.btn.btn-cancel.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModal') Cancel
              .modal-footer
-               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close
+               button.btn.btn-default(type='button', data-dismiss='modal') Close
                  
 
 
@@ -155,8 +199,8 @@ h1 hospitalStaff
                 #date.p Appointment Detail
                   
               .modal-footer
-               button.btn.btn-default.btn-cancel(type='submit') Submit
-               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close 
+               button.btn.btn-default(type='submit') Submit
+               button.btn.btn-default(type='button', data-dismiss='modal') Close 
 
                //DocCal Modal
            #DocCalModal.modal.fade(role='dialog')
@@ -187,8 +231,8 @@ h1 hospitalStaff
                  script(src='../../dist/js/doctor-Calendar.js') 
                   
               .modal-footer
-               button.btn.btn-default.btn-cancel(type='submit') Submit
-               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close 
+               button.btn.btn-default(type='submit') Submit
+               button.btn.btn-default(type='button', data-dismiss='modal') Close 
 
 
 

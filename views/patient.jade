@@ -1,10 +1,9 @@
 include ./head
-h1 patient
-.panel.panel-login
+.panel-all
  .panel-heading
    ul.nav.nav-tabs
               li.active
-                a(data-toggle='tab', href='#login') Appointment
+                a(data-toggle='tab', href='#login' ) Appointment
  .tab-content
         
         #patientMain.tab-pane.fade.in.active
@@ -16,26 +15,60 @@ h1 patient
              .col-md-8.col-md-offset-2
                .panel.panel-default
                 .row
-                 #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
+                 #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;")
+                  .row(style="margin: 0 0 0 10;")
+                    .col-md-2 เวลา
+                    .col-xs-1 :
+                    .col-md-5#time.color-grey 10 : 00
+                  .row(style="margin: 0 0 0 10;")
+                    .col-md-2 วันที่
+                    .col-xs-1 :
+                    .col-md-5#date.color-grey 25 / 12 / 58
+                  .row(style="margin: 0 0 0 10;")
+                    .col-md-2 แผนก
+                    .col-xs-1 :
+                    .col-md-5#department.color-grey อายุรกรรม
+                  .row(style="margin: 0 0 0 10;")
+                    .col-md-2 แพทย์
+                    .col-xs-1 :
+                    .col-md-5#doctor.color-grey พญ.ไพลิน จินดามณี
                  .col-sm-3
                   .row
-                    #postpone.button.btn.btn-success.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModal') Postpone
+                    #postpone.button.btn.btn-postpone.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModal') Postpone
                     //#postpone.btn.btn-success.btn-pc.col Postpone
                   .row
                     //#cancel.btn.btn-warning.btn-pc Cancel
-                    #cancel.button.btn.btn-warning.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModal') Cancel
+                    #cancel.button.btn.btn-cancel.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModal') Cancel
                     
 
            .row
              .col-md-8.col-md-offset-2
                .panel.panel-default
                 .row
-                 #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;") ไทย
+                 #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;")
+                  .row(style="margin: 0 0 0 10;")
+                    .col-md-2 เวลา
+                    .col-xs-1 :
+                    .col-md-5#time.color-grey 10 : 00
+                  .row(style="margin: 0 0 0 10;")
+                    .col-md-2 วันที่
+                    .col-xs-1 :
+                    .col-md-5#date.color-grey 25 / 12 / 58
+                  .row(style="margin: 0 0 0 10;")
+                    .col-md-2 แผนก
+                    .col-xs-1 :
+                    .col-md-5#department.color-grey อายุรกรรม
+                  .row(style="margin: 0 0 0 10;")
+                    .col-md-2 แพทย์
+                    .col-xs-1 :
+                    .col-md-5#doctor.color-grey พญ.ไพลิน จินดามณี
                  .col-sm-3
                   .row
-                    #postpone.btn.btn-success.btn-pc.col Postpone
+                    #postpone.button.btn.btn-postpone.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModal') Postpone
+                    //#postpone.btn.btn-success.btn-pc.col Postpone
                   .row
-                    #cancel.btn.btn-warning.btn-pc Cancel
+                    //#cancel.btn.btn-warning.btn-pc Cancel
+                    #cancel.button.btn.btn-cancel.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModal') Cancel
                     
                   
         
@@ -108,7 +141,7 @@ h1 patient
 
              .modal-footer
                //button.btn.btn-default(type='submit') Submit
-               #ChooseTime.button.btn.btn-default.btn-lg(type='button', data-toggle='modal', data-dismiss='modal', data-target='#PostponeModal') Submit
+               #ChooseTime.button.btn.btn-default.btn-md(type='button', data-toggle='modal', data-dismiss='modal', data-target='#PostponeModal') Submit
                button.btn.btn-default(type='button', data-dismiss='modal') Close
 
 
@@ -152,6 +185,6 @@ h1 patient
                 #date.p Appointment Detail
                   
              .modal-footer
-               button.btn.btn-default.btn-cancel(type='submit') Submit
-               button.btn.btn-default.btn-cancel(type='button', data-dismiss='modal') Close
+               button.btn.btn-default(type='submit') Submit
+               button.btn.btn-default(type='button', data-dismiss='modal') Close
 
