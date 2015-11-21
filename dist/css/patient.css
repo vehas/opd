@@ -21,9 +21,9 @@
 }
 
 .btn-postpone:hover {
-  background: #c4c4c4;
+  background: #dddddd;
   border: solid #999999 1px;
-  color: #111111;
+  color: #333333;
   text-decoration: none;
 }
 
