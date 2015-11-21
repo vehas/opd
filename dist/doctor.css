@@ -6,16 +6,16 @@ border-collapse:
 collapse; border-spacing: 0; 
 }
 .table-x tr{
- border: 1px solid  #f7f7f9;
+ border: 1px solid  #F7E7CE;
 }
 .table-x td{
- border: 1px solid  #f9f9fa; /* No more visible border */
+ border: 1px solid  #F7E7CE; /* No more visible border */
 height: 30px; 
 }
 .table-x th{
-border: 1px solid  #f7f7f9; /* No more visible border */
+border: 1px solid  #F7E7CE; /* No more visible border */
 height: 30px;  /* Simple transition for hover effect */
-background: #dedee0;  /* Darken header a bit */
+background: #F7E7CE;  /* Darken header a bit */
 font-weight: bold;
 text-transform: uppercase;
 }
@@ -27,6 +27,12 @@ text-transform: uppercase;
 	line-height: 30px;
 	text-transform: uppercase;
 
+}
+.btn-custom{
+background: #F7E7CE; 
+}
+#basic-addon1{
+	background: #F7E7CE;
 }
 .head-doc2{
 	margin: 1em 0 0.5em 0;
