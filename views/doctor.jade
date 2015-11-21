@@ -1,4 +1,5 @@
 include ./head
+body
 <ul class="nav nav-tabs"><li ><a href="/doctor/patient/macro">Home</a></li>
 <li class="active"><a href="/doctor">Patient List</a></li></ul>
 <div class="row">
@@ -49,33 +50,36 @@ table.table.table-hover.table-x
 
 ul.list-group
       span#basic-addon1.input-group-addon CitizenID
-      li.list-group-item #{parCitizenID}
+      li.list-group-item #{parCitizenID} 19001900191
       span#basic-addon1.input-group-addon Name
-      li.list-group-item #{patientName}
+      li.list-group-item #{patientName} Max
       span#basic-addon1.input-group-addon Weight(kg)
-      li.list-group-item #{parWeight}
+      li.list-group-item #{parWeight} 99
       span#basic-addon1.input-group-addon Height(m)
-      li.list-group-item #{parHeight}
+      li.list-group-item #{parHeight} 199
       span#basic-addon1.input-group-addon Temperature(celcius)
-      li.list-group-item #{parTemperature}
+      li.list-group-item #{parTemperature} 33
       span#basic-addon1.input-group-addon Pulse(bpm)
-      li.list-group-item #{parPulse}
+      li.list-group-item #{parPulse} 129
       span#basic-addon1.input-group-addon Blood(cc)
-      li.list-group-item #{parBlood}
+      li.list-group-item #{parBlood} 55
       span#basic-addon1.input-group-addon Pressure(mmHg)
-      li.list-group-item #{parPressure}
+      li.list-group-item #{parPressure} 77 
       span#basic-addon1.input-group-addon Symtomp
-      li.list-group-item #{parSymtomp}
+      li.list-group-item #{parSymtomp} love never die
       span#basic-addon1.input-group-addon Cause
-      li.list-group-item #{parCause}
+      li.list-group-item #{parCause} love die
 
 </div>
+
 <div id="diag" class="tab-pane fade">
 <h3 class="head-doc2">Diagnosis</h3>
+
 <div class="form-group">
 <label for="disease_id">Disease ID:</label>
 <input type="text" class="form-control" id="disease_id" placeholder="Enter disease id">
 </div>
+
 <div class="form-group" id='medicineList' >
 <div class="form-group">
 <label for="pwd">medicine:</label>
@@ -92,6 +96,10 @@ ul.list-group
       button.btn.btn-info.add add
 </div>
 </div>
+<div class="form-group">
+button.btn.btn-success Submit
+</div>
+
 </div>
 </div>
 <div class="modal-footer">
