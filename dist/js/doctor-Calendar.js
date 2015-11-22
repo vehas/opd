@@ -9,7 +9,12 @@ $('.calendar').clndr({
      clickEvents:{
        click: function clickdate(target) {
          console.log("GG " ,target);
-         $('#calendar-choose').modal();
+         $('#calendarChoose').modal();
        }
      }
+});
+$( document ).ready(function() {
+   $('.hideCalendarChoose').on('click',function hideCalendarChoose() {
+       $('#calendarChoose').modal('hide');
+   })
 });
