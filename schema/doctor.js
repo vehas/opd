@@ -12,4 +12,5 @@ let doctorSchema = new Schema({
   doctorID: String,
 
 });
-module.exports = doctorSchema;
+var doctor = mongoose.model('doctor',doctorSchema);
+module.exports = doctor;

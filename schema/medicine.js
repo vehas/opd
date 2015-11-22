@@ -7,4 +7,6 @@ let medicineSchema = new Schema({
 
 
 });
-module.exports = medicineSchema;
+var medicine = mongoose.model('medicine',medicineSchema);
+
+module.exports = medicine;

@@ -9,4 +9,5 @@ let hospitalStaffSchema = new Schema({
 
 
 });
-module.exports = hospitalStaffSchema;
+var hospitalStaff = mongoose.model('hospitalStaff',hospitalStaffSchema);
+module.exports = hospitalStaff;

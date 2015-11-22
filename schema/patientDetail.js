@@ -10,4 +10,6 @@ let patientDetailSchema = new Schema({
   patientID: String,
 
 });
-module.exports = patientDetailSchema;
+var patientDetail = mongoose.model('patientDetail',patientDetailSchema);
+
+module.exports = patientDetail;

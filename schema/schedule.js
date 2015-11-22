@@ -7,4 +7,6 @@ let scheduleSchema = new Schema({
   time :String,
 
 });
-module.exports = scheduleSchema;
+var schedule = mongoose.model('schedule',nurseSchema);
+
+module.exports = schedule;

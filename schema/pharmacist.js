@@ -9,4 +9,6 @@ let pharmacistSchema = new Schema({
 
 
 });
-module.exports = pharmacistSchema;
+var pharmacist = mongoose.model('pharmacist',nurseSchema);
+
+module.exports = pharmacist;

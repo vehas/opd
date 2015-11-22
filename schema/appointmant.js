@@ -12,4 +12,5 @@ let appointmentSchema = new Schema({
   doctorID:  String,
   appointmentID: String,
 });
-module.exports = appointmentSchema;
+var appointment = mongoose.model('appointment',appointmentSchema);
+module.exports = appointment;

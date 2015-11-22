@@ -9,4 +9,6 @@ let nurseSchema = new Schema({
 
 
 });
-module.exports = nurseSchema;
+var nurse = mongoose.model('nurse',nurseSchema);
+
+module.exports = nurse;

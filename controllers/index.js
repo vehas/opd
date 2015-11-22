@@ -64,4 +64,10 @@ route.get('/pharmacist/patient/:ppid', (req, res, next) => {
   require('../models/pharmacistDetail')('pharmacistDetail',
     req, res, next);
 });
+route.get('/admin', (req, res, next) => {
+
+  require('../models/admin')('admin',
+    req, res, next);
+});
+
 module.exports = route;

@@ -1,0 +1,12 @@
+include ./head
+include ./mixin
+form.form-horizontal(action='/admin')
+  +input('name')
+  +input('surname')
+  +input('department')
+  +input('telephoneNum')
+  +input('citizenID')
+  +input('password')
+  +input('email')
+  +input('doctorID')
+  button.btn.btn-default(type='submit') submit  

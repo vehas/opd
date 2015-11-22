@@ -8,4 +8,6 @@ let medicalListSchema = new Schema({
   diagnosisID: String
 
 });
-module.exports = medicalListSchema;
+var medicalList = mongoose.model('medicalList',medicalListSchema);
+
+module.exports = medicalList;

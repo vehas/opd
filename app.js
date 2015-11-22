@@ -5,7 +5,7 @@ let express = require('express'),
 let config = require('./config.json');
 let app = express(),
   port = config.port;
-
+var db = require('./middleware/db');
 
 // set up
 app.use(morgan(':method :url :status :response-time ms  :res[content-length]'));
@@ -14,7 +14,9 @@ app.set('view engine', 'jade');
 app.set('views', './views');
 app.use('/dist', express.static('dist'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.use('/', require('./controllers'));
 

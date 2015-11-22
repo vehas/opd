@@ -8,4 +8,5 @@ let diagnosisSchema = new Schema({
   diagnosisID: String
 
 });
-module.exports = diagnosisSchema;
+var diagnosis = mongoose.model('diagnosis',diagnosisSchema);
+module.exports = diagnosis;
