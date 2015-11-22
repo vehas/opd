@@ -16,3 +16,5 @@ script.calendarTemplate(type="text/template")
         <span class="cell <%= day.classes %><%if (typeof day.events[0] != 'undefined'){%> ${day.events[0].period} <% }%><%if (typeof day.events[1] != 'undefined'){%> ${day.events[1].period} <% }%>"><%= day.day %></span>
         <% if(parseInt(day.day)%7===0) {%> <br> <%} }); %>
 script(src='../../dist/js/doctor-Calendar.js')
+include ./calendar-chooseModal
+            
