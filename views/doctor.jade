@@ -52,7 +52,7 @@ ul.list-group
       span#basic-addon1.input-group-addon CitizenID
       li.list-group-item #{parCitizenID} 19001900191
       span#basic-addon1.input-group-addon Name
-      li.list-group-item #{patientName} Max
+      li.list-group-item #{patientName} Macro Polo
       span#basic-addon1.input-group-addon Weight(kg)
       li.list-group-item #{parWeight} 99
       span#basic-addon1.input-group-addon Height(m)
@@ -61,14 +61,12 @@ ul.list-group
       li.list-group-item #{parTemperature} 33
       span#basic-addon1.input-group-addon Pulse(bpm)
       li.list-group-item #{parPulse} 129
-      span#basic-addon1.input-group-addon Blood(cc)
-      li.list-group-item #{parBlood} 55
-      span#basic-addon1.input-group-addon Pressure(mmHg)
-      li.list-group-item #{parPressure} 77 
-      span#basic-addon1.input-group-addon Symtomp
-      li.list-group-item #{parSymtomp} love never die
+      span#basic-addon1.input-group-addon BloodPressure(mmHg)
+      li.list-group-item #{parBlood} 80
+      span#basic-addon1.input-group-addon Symptom
+      li.list-group-item #{parSymtomp} lower-back pain and stomachache
       span#basic-addon1.input-group-addon Cause
-      li.list-group-item #{parCause} love die
+      li.list-group-item #{parCause} not eating enough food and this goes on for a long time.
 
 </div>
 
@@ -79,7 +77,10 @@ ul.list-group
 <label for="disease_id">Disease ID:</label>
 <input type="text" class="form-control" id="disease_id" placeholder="Enter disease id">
 </div>
-
+<div class="form-group">
+<label for="symptom_pat">อาการ:</label>
+<textarea class="form-control" rows="5" id="symptom_pat" placeholder="Enter patient Symptom"></textarea>
+</div>
 <div class="form-group" id='medicineList' >
 <div class="form-group">
 <label for="pwd">medicine:</label>
