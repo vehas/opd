@@ -3,8 +3,9 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 let medicalHistorySchema = new Schema({
   patientID: String,
-  medicalName: [String],
+  medical: [ {name : String , ID : String}],
 
 
 });
-module.exports = medicalHistorySchema;
+let medicalHistory = new mongoose.model('medicalHistory', medicalHistorySchema);
+module.exports = medicalHistory;

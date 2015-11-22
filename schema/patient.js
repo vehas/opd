@@ -1,7 +1,7 @@
 'use strict';
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
-let appointmentSchema = new Schema({
+let patientSchema = new Schema({
   patientName : String,
   surname : String,
   birthday : String,
@@ -12,4 +12,6 @@ let appointmentSchema = new Schema({
   patientID: String
 
 });
-module.exports = appointmentSchema;
+let patient = mongoose.model('patient', patientSchema);
+
+module.exports = patient;
