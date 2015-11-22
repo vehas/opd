@@ -1,97 +1,104 @@
 include ./head
-div.body
-	h1 pharmacist
-	div.container.patientList
-		ul(style='list-style-type: none; padding:0px;')
-			li.patientCard(value = '1')
-				div.row
-					div.col-xs-3
-						p 1101402022970
-					div.col-xs-3
-						p นางสาว บุญจิรา อังสุมาลี 1
-					div.col-xs-6
-						button.btn.btn-default.btn-primary.patient-btn.medRecieve-btn(type='button' data-toggle='modal' data-target='#medRecieve' value = '1') ยาที่ได้รับ
-						button.btn.btn-default.btn-success.medHistory-btn.patient-btn(type='button' data-toggle='modal' data-target='#medHistory') ประวัติการใช้ยา
-						button.btn.btn-default.btn-danger.medAllergic-btn.patient-btn(type='button' data-toggle='modal' data-target='#medAllergic') ประวัติแพ้ยา
-			li.patientCard(value = '2')
-				div.row
-					div.col-xs-3
-						p 1101402022970
-					div.col-xs-3
-						p นางสาว บุญจิรา อังสุมาลี 2
-					div.col-xs-6
-						button.btn.btn-default.btn-primary.patient-btn.medRecieve-btn(type='button' data-toggle='modal' data-target='#medRecieve' value = '2') ยาที่ได้รับ
-						button.btn.btn-default.btn-success.medHistory-btn.patient-btn(type='button' data-toggle='modal' data-target='#medHistory') ประวัติการใช้ยา
-						button.btn.btn-default.btn-danger.medAllergic-btn.patient-btn(type='button' data-toggle='modal' data-target='#medAllergic') ประวัติแพ้ยา
+nav.navbar.navbar-default
+		ul.nav.navbar-nav
+			li.active
+				a(href='#') pharmacist
+		.container-fluid
+			ul.nav.navbar-nav.navbar-right
+				li
+					a(href='#')
+						span.glyphicon.glyphicon-log-in
+						|  Logout
+div.container.patientList
+	ul(style='list-style-type: none; padding:0px;')
+		li.patientCard(value = '1')
+			div.row
+				div.col-xs-3
+					p 1101402022970
+				div.col-xs-3
+					p นางสาว บุญจิรา อังสุมาลี 1
+				div.col-xs-6
+					button.btn.btn-default.btn-primary.patient-btn.medRecieve-btn(type='button' data-toggle='modal' data-target='#medRecieve' value = '1') ยาที่ได้รับ
+					button.btn.btn-default.btn-success.medHistory-btn.patient-btn(type='button' data-toggle='modal' data-target='#medHistory') ประวัติการใช้ยา
+					button.btn.btn-default.btn-danger.medAllergic-btn.patient-btn(type='button' data-toggle='modal' data-target='#medAllergic') ประวัติแพ้ยา
+		li.patientCard(value = '2')
+			div.row
+				div.col-xs-3
+					p 1101402022970
+				div.col-xs-3
+					p นางสาว บุญจิรา อังสุมาลี 2
+				div.col-xs-6
+					button.btn.btn-default.btn-primary.patient-btn.medRecieve-btn(type='button' data-toggle='modal' data-target='#medRecieve' value = '2') ยาที่ได้รับ
+					button.btn.btn-default.btn-success.medHistory-btn.patient-btn(type='button' data-toggle='modal' data-target='#medHistory') ประวัติการใช้ยา
+					button.btn.btn-default.btn-danger.medAllergic-btn.patient-btn(type='button' data-toggle='modal' data-target='#medAllergic') ประวัติแพ้ยา
 
-	#medRecieve.modal.fade(tabindex='-1' role='dialog' aria-labelledby='medRecievelLabel' value='1')
-		.modal-dialog(role='document')
-			.modal-content
-				.modal-header
-					button.close(type='button', data-dismiss='modal', aria-label='Close')
-						span(aria-hidden='true') ×
-					h4#medRecieveLabel.modal-title ยาที่ได้รับ
-				.modal-body 
-					.col-xs-8
-						p ชื่อยา
-					.col-xs-4
-						p จำนวน
-					ul(style='list-style-type: none;padding:0px;')
-						li
-							.col-xs-8
-								p พาราเซตามอล 500mg
-							.col-xs-4
-								p 2	
-						li
-							.col-xs-8
-								p พาราเซตามอล 1000mg
-							.col-xs-4
-								p 2	
+#medRecieve.modal.fade(tabindex='-1' role='dialog' aria-labelledby='medRecievelLabel' value='1')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+				h4#medRecieveLabel.modal-title ยาที่ได้รับ
+			.modal-body 
+				.col-xs-8
+					p ชื่อยา
+				.col-xs-4
+					p จำนวน
+				ul(style='list-style-type: none;padding:0px;')
+					li
+						.col-xs-8
+							p พาราเซตามอล 500mg
+						.col-xs-4
+							p 2	
+					li
+						.col-xs-8
+							p พาราเซตามอล 1000mg
+						.col-xs-4
+							p 2	
 
-				.modal-footer
-					button.btn.btn-success.recieved(type='button', data-dismiss='modal') ได้รับยาแล้ว
-					button.btn.btn-default(type='button', data-dismiss='modal') Close
+			.modal-footer
+				button.btn.btn-success.recieved(type='button', data-dismiss='modal') ได้รับยาแล้ว
+				button.btn.btn-default(type='button', data-dismiss='modal') Close
 
 
-	#medHistory.modal.fade(tabindex='-1' role='dialog' aria-labelledby='medHistorylLabel')
-		.modal-dialog(role='document')
-			.modal-content
-				.modal-header
-					button.close(type='button', data-dismiss='modal', aria-label='Close')
-						span(aria-hidden='true') ×
-					h4#medHistoryLabel.modal-title ประวัติการใช้ยา
-				.modal-body 
-					.col-xs-4
-						p วันที่
-					.col-xs-6
-						p ชื่อยา
-					.col-xs-2
-						p จำนวน
-					ul(style='list-style-type: none; padding:0px')
-						li
-							.col-xs-4
-								p 10/10/10
-							.col-xs-6
-								p พาราเซตามอล 500mg
-							.col-xs-2
-								p 2
-				.modal-footer
-					button.btn.btn-default(type='button', data-dismiss='modal') Close
+#medHistory.modal.fade(tabindex='-1' role='dialog' aria-labelledby='medHistorylLabel')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+				h4#medHistoryLabel.modal-title ประวัติการใช้ยา
+			.modal-body 
+				.col-xs-4
+					p วันที่
+				.col-xs-6
+					p ชื่อยา
+				.col-xs-2
+					p จำนวน
+				ul(style='list-style-type: none; padding:0px')
+					li
+						.col-xs-4
+							p 10/10/10
+						.col-xs-6
+							p พาราเซตามอล 500mg
+						.col-xs-2
+							p 2
+			.modal-footer
+				button.btn.btn-default(type='button', data-dismiss='modal') Close
 
-	#medAllergic.modal.fade(tabindex='-1' role='dialog' aria-labelledby='medAllergiclLabel')
-		.modal-dialog(role='document')
-			.modal-content
-				.modal-header
-					button.close(type='button', data-dismiss='modal', aria-label='Close')
-						span(aria-hidden='true') ×
-					h4#medAllergicLabel.modal-title ประวัติแพ้ยา
-				.modal-body 
-					.col-xs-12
-						p ชื่อยา
-					ul(style='list-style-type: none; padding:0px')
-						li
-							.col-xs-12
-								p พาราดซตามอล 500mg
-				.modal-footer
-					button.btn.btn-default(type='button', data-dismiss='modal') Close
-
+#medAllergic.modal.fade(tabindex='-1' role='dialog' aria-labelledby='medAllergiclLabel')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') ×
+				h4#medAllergicLabel.modal-title ประวัติแพ้ยา
+			.modal-body 
+				.col-xs-12
+					p ชื่อยา
+				ul(style='list-style-type: none; padding:0px')
+					li
+						.col-xs-12
+							p พาราดซตามอล 500mg
+			.modal-footer
+				button.btn.btn-default(type='button', data-dismiss='modal') Close
