@@ -46,16 +46,16 @@ html
   
     link()
 
-  body
+  body.body
 
    .row.header
     .col-xs-6
       img(src='../../dist/image/Hospital_Logo.png' style="padding: 20 0 0 20 ")
     .col-xs-6
       div(style="padding: 30")
-        p(style='text-align:right ; font-size: 17; color:#666666') บุญจิรา อังสุมาลี
-        p(style='text-align:right ; font-size: 17;color:#666666;') 1999222333443
-        
+        p(style='text-align:right ; font-size: 17; color:#444') บุญจิรา อังสุมาลี
+        p(style='text-align:right ; font-size: 17;color:#444;') 1999222333443
+   .row
         if typeof account === undefined
           div #{account.name}
           div #{account.id}
