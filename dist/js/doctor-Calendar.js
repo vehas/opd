@@ -5,6 +5,11 @@ $('.calendar').clndr({
               { date: '2015-11-13', title: 'Birthday' ,period:'noon'},
               { date: '2015-11-17', title: 'Birthday' ,period:'noon'},
               { date: '2015-11-17', title: 'Birthday' ,period:'morning'},
+              { date: '2015-11-23', title: 'Birthday' ,period:'morning'},
+              { date: '2015-11-24', title: 'Birthday' ,period:'morning'},
+              { date: '2015-11-25', title: 'Birthday' ,period:'morning'},
+              { date: '2015-11-25', title: 'Birthday' ,period:'noon'},
+              { date: '2015-11-26', title: 'Birthday' ,period:'morning'},
             ],
      clickEvents:{
        click: function clickdate(target) {
