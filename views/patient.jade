@@ -1,12 +1,18 @@
 include ./head
-.panel-all
- .panel-heading
-   ul.nav.nav-tabs
-              li.active
-                a(data-toggle='tab', href='#login' ) Appointment
- .tab-content
+nav.navbar.navbar-default
+      
+        div
+          ul.nav.navbar-nav
+            li.active
+              a(href='#') Appointment
+        .container-fluid
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#')
+                span.glyphicon.glyphicon-log-in
+                |  Logout
         
-        #patientMain.tab-pane.fade.in.active
+#patientMain.tab-pane.fade.in.active
           .container
            .row
              //#make.btn.btn-info Make Appointment

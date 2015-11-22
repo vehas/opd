@@ -1,6 +1,16 @@
 include ./head
-div.body
-	h1 Doctor Calendar
-	<ul class="nav nav-tabs"><li  class="active" ><a href="/doctor/patient/macro">Home</a></li>
-	<li ><a href="/doctor">Patient List</a></li></ul>
+nav.navbar.navbar-default
+        div
+          ul.nav.navbar-nav
+            li.active
+              a(href="/doctor/patient/macro") Home
+            li
+              a(href="/doctor") Patient List
+        .container-fluid
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#')
+                span.glyphicon.glyphicon-log-in
+                |  Logout
+
 include ./calendar
