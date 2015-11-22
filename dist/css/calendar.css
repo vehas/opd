@@ -67,13 +67,15 @@ html[xmlns] .clearfix {
   min-height: 30px;
 }
 .days .cell.event{
-  background-color: rgb(156, 162, 155);
+  background-color: #c9c9c9;
+  /*background-color: rgb(156, 162, 155);*/
 }
 .days .cell.today{
-  background-color: rgb(102, 111, 100);
+  background-color: #FFbbbb;
+  /*background-color: rgb(102, 111, 100);*/
 }
 .bg{
-  background-color: #b6b6b6;
+  background-color: #aaaaaa;
 }
 .cell.event.morning::after{
    content: "";
