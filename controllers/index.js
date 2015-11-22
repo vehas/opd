@@ -2,7 +2,8 @@ var express = require('express');
 var route = express.Router();
 
 route.get('/', (req, res) => {
-  res.render('index', {});
+  res.redirect('/login');
+  // res.render('index', {});
 });
 route.get('/login', (req, res) => {
   res.render('login', {});
