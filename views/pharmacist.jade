@@ -3,19 +3,28 @@ div.body
 	h1 pharmacist
 	div.container.patientList
 		ul(style='list-style-type: none; padding:0px;')
-			li.patientCard
+			li.patientCard(value = '1')
 				div.row
 					div.col-xs-3
 						p 1101402022970
 					div.col-xs-3
-						p นางสาว บุญจิรา อังสุมาลี 
+						p นางสาว บุญจิรา อังสุมาลี 1
 					div.col-xs-6
-						button.btn.btn-default.btn-primary.patient-btn(type='button' data-toggle='modal' data-target='#medRecieve') ยาที่ได้รับ
-						button.btn.btn-default.btn-success.patient-btn(type='button' data-toggle='modal' data-target='#medHistory') ประวัติการใช้ยา
-						button.btn.btn-default.btn-danger.patient-btn(type='button' data-toggle='modal' data-target='#medAllergic') ประวัติแพ้ยา
+						button.btn.btn-default.btn-primary.patient-btn.medRecieve-btn(type='button' data-toggle='modal' data-target='#medRecieve' value = '1') ยาที่ได้รับ
+						button.btn.btn-default.btn-success.medHistory-btn.patient-btn(type='button' data-toggle='modal' data-target='#medHistory') ประวัติการใช้ยา
+						button.btn.btn-default.btn-danger.medAllergic-btn.patient-btn(type='button' data-toggle='modal' data-target='#medAllergic') ประวัติแพ้ยา
+			li.patientCard(value = '2')
+				div.row
+					div.col-xs-3
+						p 1101402022970
+					div.col-xs-3
+						p นางสาว บุญจิรา อังสุมาลี 2
+					div.col-xs-6
+						button.btn.btn-default.btn-primary.patient-btn.medRecieve-btn(type='button' data-toggle='modal' data-target='#medRecieve' value = '2') ยาที่ได้รับ
+						button.btn.btn-default.btn-success.medHistory-btn.patient-btn(type='button' data-toggle='modal' data-target='#medHistory') ประวัติการใช้ยา
+						button.btn.btn-default.btn-danger.medAllergic-btn.patient-btn(type='button' data-toggle='modal' data-target='#medAllergic') ประวัติแพ้ยา
 
-
-	#medRecieve.modal.fade(tabindex='-1' role='dialog' aria-labelledby='medRecievelLabel')
+	#medRecieve.modal.fade(tabindex='-1' role='dialog' aria-labelledby='medRecievelLabel' value='1')
 		.modal-dialog(role='document')
 			.modal-content
 				.modal-header
@@ -40,7 +49,9 @@ div.body
 								p 2	
 
 				.modal-footer
+					button.btn.btn-success.recieved(type='button', data-dismiss='modal') ได้รับยาแล้ว
 					button.btn.btn-default(type='button', data-dismiss='modal') Close
+
 
 	#medHistory.modal.fade(tabindex='-1' role='dialog' aria-labelledby='medHistorylLabel')
 		.modal-dialog(role='document')
