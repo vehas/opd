@@ -37,5 +37,9 @@
     "node-sass": "^3.4.1",
     "normalize.css": "^3.0.3",
     "zombie": "^4.2.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^1.0.0",
+    "eslint-plugin-react": "^3.10.0"
   }
 }

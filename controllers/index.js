@@ -1,12 +1,13 @@
-var express = require('express');
-var route = express.Router();
+'use strict';
+let express = require('express');
+let route = express.Router();
 
 route.get('/', (req, res) => {
   res.redirect('/login');
   // res.render('index', {});
 });
 route.get('/login', (req, res) => {
-  res.render('login', {});
+  res.render('login', {login: true});
 });
 route.get('/register', (req, res, next) => {
   require('../models/register')('register',

@@ -41,23 +41,12 @@ html
     //-pharmacist css
     link(href='../../dist/css/pharmacist.css' rel="stylesheet" type='text/css')
     script(src='../../dist/js/pharmacist.js')
-
-
-  
-    link()
-  body
-
+ body
   .row.header
     .col-xs-6
-      img(src='../../dist/image/Hospital_Logo.png' style="padding: 20 0 0 20 ")
+        img(src='../../dist/image/Hospital_Logo.png' style="padding: 20 0 0 20 ")
     .col-xs-6
-      div(style="padding: 30")
-        p(style='text-align:right ; font-size: 17; color:#666666') บุญจิรา อังสุมาลี
-        p(style='text-align:right ; font-size: 17;color:#666666;') 1999222333443
-        
-        if typeof account === undefined
-          div #{account.name}
-          div #{account.id}
-          //- div #{!unauthenedPage}
-          hr
-      <!-- Latest compiled and minified CSS -->
+    if !login
+        div(style="padding: 30")
+          p(style='text-align:right ; font-size: 17; color:#666666') บุญจิรา อังสุมาลี
+          p(style='text-align:right ; font-size: 17;color:#666666;') 1999222333443
