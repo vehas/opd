@@ -9,7 +9,7 @@ h1{
 	padding-bottom: 87px;
 }
 body{
-  background-color:  #ccc;
+  background-color:  #f1f1f1;
 }
 .nav-bar{
   background-color:  green;
@@ -25,13 +25,16 @@ body{
 }
 
 .header{
-  background-image: url(../../dist/image/Silver-Blur-Background-Wallpaper.jpg);
-  background-size: 100% 150%;
+  background-image: url(../../dist/image/23394-grey-blur-1920x1080-abstract-wallpaper2.jpg);
+  /*background-image: url(../../dist/image/Silver-Blur-Background-Wallpaper.jpg);*/
+  background-size: 100% 100%;
     background-repeat: no-repeat;
   padding-bottom: 100px;
   height: 150;
 }
 
-.body{
-  margin-top: -80px;
+.bod2{
+   background-image: url(../../dist/image/white-background-wallpaper-2956247.jpg);
+  background-size: 100% 100%;
+  
 }
