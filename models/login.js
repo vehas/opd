@@ -18,6 +18,7 @@ var route = function route(req, res, next) {
           if(err) console.log(err);
           if(ismatch){
             req.session.user = db.actor[0];
+            req.session.citizenID = db.citizenID
               res.end(req.session.user);
               // res.end('patient');
           }else{
