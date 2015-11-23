@@ -3,3 +3,26 @@ mixin input(type)
     label.col-sm-2.control-label(for=type)=type
     .col-sm-8
       input.form-control(name=type id=type type='text' placeholder=type)
+mixin nav(page)
+    div
+      ul.nav.navbar-nav
+        li.active
+          a(href='#')= page
+mixin logout()
+  .container-fluid
+    ul.nav.navbar-nav.navbar-right
+      li
+        a(href='#')
+          span.glyphicon.glyphicon-log-in
+          |  Logout
+mixin navbar(page)
+  nav.navbar.navbar-default
+    +nav(page)
+mixin navbarLogout(page)
+  nav.navbar.navbar-default
+    +nav(page)
+    +logout()
+mixin nurseinput(type,unit)
+  span#basic-addon1.input-group-addon #{type}(#{unit})
+  li.list-group-item
+    input.name(placeholder='Please Enter #{type}' class="form-control" id=type)

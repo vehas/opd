@@ -1,0 +1,21 @@
+include ./mixin
+#myModal.modal.fade(role='dialog')
+      .modal-dialog
+        // Modal content
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal') ×
+            h4.modal-title.head-doc2 Patient Record
+          .modal-body
+            .tab-content
+              #home.tab-pane.fade.in.active
+                h4.head-doc2 #{patient} 
+                ul.list-group
+                      +nurseinput('Weight','kg')
+                      +nurseinput('Height','m')
+                      +nurseinput('Temperature','celcius')
+                      +nurseinput('Pulse','bpm')
+                      +nurseinput('Blood Pressure','mmHg')
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') cancel
+            button.btn.btn-success(type='button') Submit

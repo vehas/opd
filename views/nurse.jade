@@ -1,81 +1,27 @@
 include ./head
-
-nav.navbar.navbar-default
-      
-        div
-          ul.nav.navbar-nav
-            li.active
-              a(href='#') Nurse Home
-        .container-fluid
-          ul.nav.navbar-nav.navbar-right
-            li
-              a(href='#')
-                span.glyphicon.glyphicon-log-in
-                |  Logout
-<div class="row">
-<div class="col-xs-3 col-sm-1"></div>
-<div class="col-xs-12 col-sm-10" >
-h2.head-doc Patient List
-table.table.table-hover.table-x
-  thead
-    tr
-      th name
-      th surname
-      th gender
-      th age
-  tbody
-    each par in patient
-      tr
-        td
-          a(data-toggle="modal" href="#myModal") #{par.name}
-        td 
-          a(data-toggle="modal" href="#myModal") #{par.surname}
-        td 
-          a(data-toggle="modal" href="#myModal") #{par.gender}
-        td 
-          a(data-toggle="modal" href="#myModal") #{par.age}
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-<div class="modal-dialog">
-    
-<!-- Modal content-->
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal">&times;</button>
-<h4 class="modal-title head-doc2">Patient Record</h4>
-</div>
-<div class="modal-body">
-
-<div class="tab-content">
-<div id="home" class="tab-pane fade in active">
-h4.head-doc2 Macro Polo
-ul.list-group 
-
-      span#basic-addon1.input-group-addon Weight(kg)
-      li.list-group-item    
-        input.name(placeholder='Please Enter Weight' class="form-control" id="weight")
-      span#basic-addon1.input-group-addon Height(m)
-      li.list-group-item
-          input.name(placeholder='Please Enter Height' class="form-control" id="height" )
-      span#basic-addon1.input-group-addon Temperature(celcius)
-      li.list-group-item
-        input.name(placeholder='Please Enter Temperature' class="form-control" id="temp" )
-      span#basic-addon1.input-group-addon Pulse(bpm)
-      li.list-group-item
-        input.name(placeholder='Please Enter Pulse Rate' class="form-control" id="pulse")
-      span#basic-addon1.input-group-addon BloodPressure(mmHg)
-      li.list-group-item
-        input.name(placeholder='Please Enter BloodPressure' class="form-control" id="blood")
-
-</div>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-success">Submit</button>
-</div>
-</div>
-</div>
-</div>
++navbarLogout('Nurse Home')      
+.row
+  .col-xs-3.col-sm-1
+  .col-xs-12.col-sm-10
+    h2.head-doc Patient List
+    table.table.table-hover.table-x
+      thead
+        tr
+          th name
+          th surname
+          th gender
+          th age
+      tbody
+        each par in patient
+          tr
+            td
+              a.patientName(data=par.name) #{par.name}
+            td 
+              a.patientName(data=par.name) #{par.surname}
+            td 
+              a.patientName(data=par.name) #{par.gender}
+            td 
+              a.patientName(data=par.name) #{par.age}
+.modalTemp
+script(src='../dist/compiledViews/nurseModaltemplates.js')
 script(src='../dist/js/nurse.js')

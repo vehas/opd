@@ -7,9 +7,11 @@ route.get('/', (req, res) => {
   // res.render('index', {});
 });
 route.get('/login', (req, res) => {
-  res.render('login', {login: true});
+  res.render('login', {
+    login: true
+  });
 });
-route.get('/register', (req, res, next) => {
+route.post('/register', (req, res, next) => {
   require('../models/register')('register',
     req, res, next);
 });
