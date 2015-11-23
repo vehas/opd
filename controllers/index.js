@@ -11,6 +11,9 @@ route.get('/login', (req, res) => {
     login: true
   });
 });
+route.post('/login', (req, res, next) => {
+  require('../models/login')(req, res, next);
+});
 route.post('/register', (req, res, next) => {
   require('../models/register')('register',
     req, res, next);

@@ -18,7 +18,7 @@ $(document).ready(function runondoc() {
           //for production
           // bootbox.alert('register success',function redirect() {
           //   window.location.replace("/patient");
-          });
+          // });
         });
 
       }

@@ -1,4 +1,7 @@
-include ./mixin
+mixin nurseinput(type,unit)
+  span#basic-addon1.input-group-addon #{type}(#{unit})
+  li.list-group-item
+    input.name(placeholder='Please Enter #{type}' class="form-control" id=type)
 #myModal.modal.fade(role='dialog')
       .modal-dialog
         // Modal content
