@@ -11,12 +11,14 @@ var db = require('./middleware/db');
 // set up
 // set up session
 app.use(session({
-  secret: 'ehdyfgoiwe',
-  cookie: {
-    maxAge: 60000
-  }
-}))
+    secret: 'ehdyfgoiwe',
+    cookie: {
+      maxAge: 60000
+    }
+  }))
+  // morgan for log
 app.use(morgan(':method :url :status :response-time ms  :res[content-length]'));
+
 app.engine('jade', require('jade').__express);
 app.set('view engine', 'jade');
 app.set('views', './views');

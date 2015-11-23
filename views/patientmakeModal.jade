@@ -1,0 +1,42 @@
+#makeModal.modal.fade(role='dialog')
+ .modal-dialog.modal-lg
+  .modal-content
+   .modal-header
+     button.close(type='button', data-dismiss='modal') ×
+     h4.modal-title Make New Appointment
+   .modal-body
+
+       //h2 Vertical (basic) Form
+       form(role='form')
+       .form-group
+         label(for='Symtom') Symtom:
+         input#Symtom.form-control(type='text', placeholder='กรอกอาการป่วย')
+       .form-group
+         label(for='Cause') Cause:
+         input#Cause.form-control(type='text', placeholder='กรอกสาเหตุหากมี')
+       .form-group
+         label(for='Doctor') Doctor Name:
+         input#Docname.form-control(type='text', placeholder='ในกรณีที่ต้องการระบุแพทย์ที่ต้องการพบ')
+      
+       .form-group
+         label(for='sel1') Department (select one):
+         select#sel1.form-control
+           option อายุรกรรม
+           option ศัลยกรรม
+           option กุมารเวชกรรม
+           option สูตินรีเวช
+           option ทันตกรรม
+           option เวชปฎิบัติ
+           option แพทย์เฉพาะทางอื่นๆ
+
+       input#depart.form-control(type='text', placeholder='ในกรณีที่ต้องการระบุแพทย์เฉพาะทางอื่นๆ')
+
+       //.form-group
+         label(for='pwd') Password:
+         input#pwd.form-control(type='password', placeholder='Enter password')
+      
+
+   .modal-footer
+     //button.btn.btn-default(type='submit') Submit
+     #ChooseTime.button.btn.btn-default.btn-md(type='button', data-toggle='modal', data-dismiss='modal', data-target='#PostponeModal') Submit
+     button.btn.btn-default(type='button', data-dismiss='modal') Close

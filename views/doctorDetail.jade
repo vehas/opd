@@ -1,0 +1,10 @@
+include ./head
+nav.navbar.navbar-default
+        div
+          ul.nav.navbar-nav
+            li
+              a(href="/doctor") Patient List
+            li.active
+              a(href="/doctor/patient/macro") Doctor's Schedule
+        +logout()
+include ./calendar

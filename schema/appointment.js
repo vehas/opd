@@ -8,8 +8,8 @@ let appointmentSchema = new Schema({
   cause: String,
   doctorName: String,
   department: String,
-  patientID: String,
-  doctorID:  String,
+  patientID: String, //citizenID of patient
+  doctorID:  String, //citizen id of  doctor
   appointmentID: String,
 });
 var appointment = mongoose.model('appointment',appointmentSchema);

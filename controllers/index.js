@@ -3,8 +3,9 @@ let express = require('express');
 let route = express.Router();
 
 route.get('/', (req, res) => {
-  res.redirect('/login');
-  // res.render('index', {});
+  res.render('login', {
+    login: true
+  });
 });
 route.get('/login', (req, res) => {
   res.render('login', {
@@ -13,6 +14,9 @@ route.get('/login', (req, res) => {
 });
 route.post('/login', (req, res, next) => {
   require('../models/login')(req, res, next);
+});
+route.post('/appointment', (req, res, next) => {
+  require('../models/appointment')(req, res, next);
 });
 route.post('/register', (req, res, next) => {
   require('../models/register')('register',

@@ -1,0 +1,20 @@
+#PostponeModal.modal.fade(role='dialog')
+ .modal-dialog.modal-md
+  .modal-content
+   .modal-header
+     button.close(type='button', data-dismiss='modal') ×
+     h4.modal-title Choose Appointment Time
+   .modal-body
+      h4.modaltitle 
+      #listotherdate.list-group.addspace
+        label เวลานัดหมายที่เร็วที่สุด :
+        button.list-group-item(type='button' checked) 2015-11-26
+        br
+        label เวลานัดหมายอื่นๆ :
+        button.list-group-item(style="margin-bottom: 10px", type='button') 2015-12-2
+        button.list-group-item(style="margin-bottom: 10px",type='button') 2015-12-5
+        button.list-group-item(type='button') 2015-12-13
+        
+   .modal-footer
+     button#chooseDate.btn.btn-default(type='submit') Submit
+     button.btn.btn-default(type='button', data-dismiss='modal') Close

@@ -7,14 +7,7 @@ nav.navbar.navbar-default
               a(href="/doctor") Patient List
             li
               a(href="/doctor/patient/macro") Doctor's Schedule
-        .container-fluid
-          ul.nav.navbar-nav.navbar-right
-            li
-              a(href='#')
-                span.glyphicon.glyphicon-log-in
-                |  Logout
-//- <ul class="nav nav-tabs"><li ><a href="/doctor/patient/macro">Home</a></li>
-//- <li class="active"><a href="/doctor">Patient List</a></li></ul>
+        +logout()
 <div class="row">
 <div class="col-xs-3 col-sm-1"></div>
 <div class="col-xs-12 col-sm-10" >

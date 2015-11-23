@@ -17,9 +17,9 @@ var route = function route(req, res, next) {
         function loginComplete(err,ismatch) {
           if(err) console.log(err);
           if(ismatch){
-            req.session.user = db.actor[0];
+            req.session.actor = db.actor;
             req.session.citizenID = db.citizenID
-              res.end(req.session.user);
+              res.end(req.session.actor[0]);
               // res.end('patient');
           }else{
 
