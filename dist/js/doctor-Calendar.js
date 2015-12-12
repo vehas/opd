@@ -25,6 +25,8 @@ $( document ).ready(function() {
        $('#calendarChoose').modal('hide');
    });
    $('.ChooseCalendar').on('click',function ChooseCalendar() {
+    //  if(!bootbox.confirm('comfirm changed achedule'))
+    //           return;
       console.log("date E",dclndr.eventperiod,dclndr.eventdate.toDate());
       var newEvent =  dclndr.eventdate.toISOString().slice(0,10);
       console.log("newEvent",newEvent);

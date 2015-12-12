@@ -27,7 +27,9 @@ gulp.task('nodemon', cb => {
     ignore: [
       'gulpfile.js',
       'node_modules/',
-      'test/'
+      'test/',
+      'views/',
+      'dist/'
     ]
   })
   .on('start', () => {

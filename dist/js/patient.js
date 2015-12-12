@@ -5,7 +5,7 @@ $(document).ready(function onload() {
      var out = {
         Symtom : $('#Symtom').val(),
         Cause: $('Cause').val(),
-        Doctor : $('#Doctor').val(),
+        Doctor : $('#Docname').val(),
 
      };
      if($('#sel1').val() === 'แพทย์เฉพาะทางอื่นๆ'){
@@ -15,6 +15,9 @@ $(document).ready(function onload() {
        out.department = $('#sel1').val();
      }
      appo.datail = out;
+     $.post('/appointment/detail',appo,function done(dates) {
+            console.log(dates);
+     });
      console.log(out);
    });
    $('#listotherdate button.list-group-item').on('click',function chooseD() {
@@ -23,7 +26,7 @@ $(document).ready(function onload() {
    });
    $('#chooseDate').on('click',function () {
            console.log(appo);
-           $.post('/appointment',appo,function done(data) {
+           $.post('/appointment/choosedate',appo,function done(data) {
                   console.log(data);
            });
    });

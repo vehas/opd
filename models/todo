@@ -7,3 +7,5 @@ lade local
 undefined
 > fs.writeFileSync("./dist/compiledViews/nurseModaltemplates.js", jsFunctionString);
 
+white box
+integration test

@@ -1,6 +1,6 @@
 include ./head
 include ./mixin
-form.form-horizontal(action='/admin')
+form.form-horizontal(action='/admin' method='post')
   +input('name')
   +input('surname')
   +input('department')
@@ -9,4 +9,6 @@ form.form-horizontal(action='/admin')
   +input('password')
   +input('email')
   +input('doctorID')
+  +input('userType')
+  
   button.btn.btn-default(type='submit') submit  

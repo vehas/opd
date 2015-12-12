@@ -17,7 +17,11 @@ app.use(session({
     }
   }))
   // morgan for log
-app.use(morgan(':method :url :status :response-time ms  :res[content-length]'));
+app.use(morgan(':method :url :status :response-time ms  :res[content-length]', {
+  skip: (req, res) => {
+    return req.baseUrl === '/dist';
+  }
+}));
 
 app.engine('jade', require('jade').__express);
 app.set('view engine', 'jade');

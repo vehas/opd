@@ -15,9 +15,12 @@ route.get('/login', (req, res) => {
 route.post('/login', (req, res, next) => {
   require('../models/login')(req, res, next);
 });
-route.post('/appointment', (req, res, next) => {
+route.param('aaid', (req, res, next, aaid) => {
+  req.aaid = aaid;
+  console.log('----------------');
   require('../models/appointment')(req, res, next);
 });
+route.post('/appointment/:aaid', () => {});
 route.post('/register', (req, res, next) => {
   require('../models/register')('register',
     req, res, next);
@@ -80,5 +83,9 @@ route.get('/admin', (req, res, next) => {
   require('../models/admin')('admin',
     req, res, next);
 });
+route.post('/admin', (req, res, next) => {
 
+  require('../models/adminSave')('admin',
+    req, res, next)
+});
 module.exports = route;
