@@ -21,6 +21,10 @@ var dclndr = $('.calendar').clndr({
      }
 });
 $( document ).ready(function() {
+   var docSchedule = $('#docterSchedule').html();
+   docSchedule = JSON.parse(docSchedule);
+   dclndr.addEvents( docSchedule );
+
    $('.hideCalendarChoose').on('click',function hideCalendarChoose() {
        $('#calendarChoose').modal('hide');
    });
