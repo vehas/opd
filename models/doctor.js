@@ -23,14 +23,18 @@ let route = function route(render, req, res, next) {
     }else{
       console.log('doctor :',respond);
       req.session.doctorID = respond.doctorID ;
+      req.session.doctorName = respond.doctorName;
+      req.session.surname = respond.surname;
       let account = { name: respond.doctorName + "  "+ respond.surname,
                       id: respond.doctorID };
-      schedule.find({'doctorID' : respond.doctorID},(err,doctorSchedule)=>{
-          console.log('doctor Schedule : ',doctorSchedule);
-          let out = { page: 'nurse',patient: "", account,doctorSchedule };
+
+          let out = { page: 'doctor',
+                      patient: "",
+                      account };
+          console.log(out);
           res.render(render, out);
 
-        });
+
     }
   })
 

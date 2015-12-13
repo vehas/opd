@@ -54,7 +54,7 @@ route.param('dpid', (req, res, next, id) => {
   console.log(id);
   next();
 });
-route.get('/doctor/patient/:dpid', (req, res, next) => {
+route.get('/doctor/schedule', (req, res, next) => {
   require('../models/doctorDetail')('doctorDetail',
     req, res, next);
 });
