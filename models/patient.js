@@ -1,5 +1,5 @@
 'use strict';
-let patientSchema = require('../schema/patient.js');
+let patient = require('../schema/patient.js');
 let appointment = require('../schema/appointment');
 let route = function route(render, req, res, next) {
   // console.log('-------------------------------------');
@@ -17,10 +17,24 @@ let route = function route(render, req, res, next) {
   }
   // find patinet appointment
   console.log(req.session);
+  patient.findOne({
+    'citizenID': req.session.citizenID
+  }, (err, respond) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(req.respond);
+      let account = {
+        name: "เวหา สุวัฒน์",
+        id: "3323433"
+      };
 
-  // render
-  res.render(render, {
-    page: 'patient'
+      // render
+      res.render(render, {
+        page: 'patient',
+        account
+      });
+    }
   });
 };
 module.exports = route;

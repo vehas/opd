@@ -15,6 +15,9 @@ route.get('/login', (req, res) => {
 route.post('/login', (req, res, next) => {
   require('../models/login')(req, res, next);
 });
+route.get('/logout', (req, res, next) => {
+  require('../models/logout')(req, res, next);
+});
 route.param('aaid', (req, res, next, aaid) => {
   req.aaid = aaid;
   console.log('----------------');
