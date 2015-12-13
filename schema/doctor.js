@@ -10,7 +10,6 @@ let doctorSchema = new Schema({
   password: String,
   email:  String,
   doctorID: String,
-
 });
 var doctor = mongoose.model('doctor',doctorSchema);
 module.exports = doctor;

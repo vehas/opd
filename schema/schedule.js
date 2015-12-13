@@ -5,8 +5,9 @@ let scheduleSchema = new Schema({
   doctorID : String,
   date : Date,
   time :String,
+  period: String
 
 });
-var schedule = mongoose.model('schedule',nurseSchema);
+var schedule = mongoose.model('schedule', scheduleSchema);
 
 module.exports = schedule;

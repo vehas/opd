@@ -5,7 +5,7 @@ let route = function route(render, req, res, next) {
     console.log(req.body);
     switch (req.body.userType) {
       case 'doctor':
-        var user1 = new doctor(req.query);
+        var user1 = new doctor(req.body);
         user1.save(function (err, userObj) {
           if (err) {
             console.log(err);

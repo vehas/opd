@@ -62,7 +62,10 @@ route.get('/doctor', (req, res, next) => {
   require('../models/doctor')('doctor',
     req, res, next);
 });
-
+route.post('/doctorSchedule', (req, res, next) => {
+  require('../models/doctorSchedule')('schedule',
+    req, res, next);
+});
 route.get('/pharmacist', (req, res, next) => {
   require('../models/pharmacist')('pharmacist',
     req, res, next);

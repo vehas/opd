@@ -13,7 +13,7 @@ var dclndr = $('.calendar').clndr({
             ],
      clickEvents:{
        click: function clickdate(target) {
-         console.log("GG " ,target);
+        //  console.log("GG " ,target);
          dclndr.eventdate = target.date.add(1, 'seconds');
          dclndr.eventperiod = '';
          $('#calendarChoose').modal();
@@ -39,10 +39,13 @@ $( document ).ready(function() {
           if(moment(event.date).diff(moment(newEvent),'days')===1){
               console.log(event);
              if(typeof event.period!= 'undefined'){
-               console.log(event.period,dclndr.eventperiod,event.period == dclndr.eventperiod);
+               console.log(event.period,
+                 dclndr.eventperiod,
+                 event.period == dclndr.eventperiod);
                  if(event.period == dclndr.eventperiod) {
                    console.log('delete please');
                    samedate = true;
+
                    return true;
                   //  console.log('no hope');
                 }
@@ -56,6 +59,11 @@ $( document ).ready(function() {
         console.log(samedate);
        dclndr.addEvents( [ { date: dclndr.eventdate.toISOString(),
                             period:dclndr.eventperiod} ]);
+        $.post('/doctorSchedule',{ date: dclndr.eventdate.toISOString(),
+                             period:dclndr.eventperiod})
+              .done(function( data ) {  console.log('data :', data );})
+              .fail(function(err) {  console.log( "error", err ); });
+
        }
       $('#calendarChoose').modal('hide');
    });
