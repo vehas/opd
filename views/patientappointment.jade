@@ -1,28 +1,29 @@
-.row
-  .col-md-8.col-md-offset-2
-    .panel.panel-default
-     .row
-      #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;")
-       .row(style="margin: 0 0 0 10;")
-         .col-md-2 เวลา
-         .col-xs-1 :
-         .col-md-5#time.color-grey 10 : 00
-       .row(style="margin: 0 0 0 10;")
-         .col-md-2 วันที่
-         .col-xs-1 :
-         .col-md-5#date.color-grey 25 / 12 / 58
-       .row(style="margin: 0 0 0 10;")
-         .col-md-2 แผนก
-         .col-xs-1 :
-         .col-md-5#department.color-grey อายุรกรรม
-       .row(style="margin: 0 0 0 10;")
-         .col-md-2 แพทย์
-         .col-xs-1 :
-         .col-md-5#doctor.color-grey พญ.ไพลิน จินดามณี
-      .col-sm-3
+mixin patientappointment(app)
+  .row
+    .col-md-8.col-md-offset-2
+      .panel.panel-default
        .row
-         #postpone.button.btn.btn-postpone.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModal') Postpone
-         //#postpone.btn.btn-success.btn-pc.col Postpone
-       .row
-         //#cancel.btn.btn-warning.btn-pc Cancel
-         #cancel.button.btn.btn-cancel.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModal') Cancel
+        #appane.panel-body.col-sm-8(style="margin: 0 0 0 20;")
+         .row(style="margin: 0 0 0 10;")
+           .col-md-2 เวลา
+           .col-xs-1 :
+           .col-md-5#time.color-grey 09.00
+         .row(style="margin: 0 0 0 10;")
+           .col-md-2 วันที่
+           .col-xs-1 :
+           .col-md-5#date.color-grey  #{app.date.toString().slice(0,15)}
+         .row(style="margin: 0 0 0 10;")
+           .col-md-2 แผนก
+           .col-xs-1 :
+           .col-md-5#department.color-grey #{app.department}
+         .row(style="margin: 0 0 0 10;")
+           .col-md-2 แพทย์
+           .col-xs-1 :
+           .col-md-5#doctor.color-grey  #{app.doctorName}
+        .col-sm-3
+         .row
+           #postpone.button.btn.btn-postpone.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#PostponeModal') Postpone
+           //#postpone.btn.btn-success.btn-pc.col Postpone
+         .row
+           //#cancel.btn.btn-warning.btn-pc Cancel
+           .cancel.button.btn.btn-cancel.btn-pc.btn-md(type='button', data-toggle='modal', data-target='#CancelModal', data=app._id) Cancel

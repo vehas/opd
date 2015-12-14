@@ -10,8 +10,8 @@ $(document).ready(function runondoc() {
                 confirmPwd :$('#confirmPassword').val(),
                 };
         console.log(out);
-        if (true
-          // registerFormCheck(out)
+        if (
+          registerFormCheck(out)
         ){
         console.log(out);
         delete out.confirmPwd

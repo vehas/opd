@@ -8,12 +8,12 @@
       h4.modaltitle 
       #listotherdate.list-group.addspace
         label เวลานัดหมายที่เร็วที่สุด :
-        button.list-group-item(type='button' checked) 2015-11-26
+        button.list-group-item(type='button' checked) #{times[0]}
         br
         label เวลานัดหมายอื่นๆ :
-        button.list-group-item(style="margin-bottom: 10px", type='button') 2015-12-2
-        button.list-group-item(style="margin-bottom: 10px",type='button') 2015-12-5
-        button.list-group-item(type='button') 2015-12-13
+        button.list-group-item(style="margin-bottom: 10px", type='button') #{times[1]}
+        button.list-group-item(style="margin-bottom: 10px",type='button') #{times[2]}
+        button.list-group-item(type='button') #{times[3]}
         
    .modal-footer
      button#chooseDate.btn.btn-default(type='submit') Submit
